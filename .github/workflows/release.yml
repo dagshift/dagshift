@@ -80,25 +80,25 @@ jobs:
           name: dist
           path: dist/
 
-  pypi:
-    needs: build
-    if: github.ref_type == 'tag' || inputs.publish
-    runs-on: ubuntu-latest
-    environment:
-      name: pypi
-      url: https://pypi.org/project/dagshift/${{ needs.build.outputs.version }}/
-    permissions:
-      id-token: write
-    steps:
-      - uses: actions/download-artifact@v8
-        with:
-          name: dist
-          path: dist
-      - run: rm dist/*.vsix
-      - uses: pypa/gh-action-pypi-publish@release/v1
+  # pypi:
+  #   needs: build
+  #   if: github.ref_type == 'tag' || inputs.publish
+  #   runs-on: ubuntu-latest
+  #   environment:
+  #     name: pypi
+  #     url: https://pypi.org/project/dagshift/${{ needs.build.outputs.version }}/
+  #   permissions:
+  #     id-token: write
+  #   steps:
+  #     - uses: actions/download-artifact@v8
+  #       with:
+  #         name: dist
+  #         path: dist
+  #     - run: rm dist/*.vsix
+  #     - uses: pypa/gh-action-pypi-publish@release/v1
 
   marketplace:
-    needs: [build, pypi]
+    needs: [build]
     if: github.ref_type == 'tag' || inputs.publish
     runs-on: ubuntu-latest
     environment:
@@ -132,7 +132,7 @@ jobs:
           npx ovsx publish --packagePath ../../dist/*.vsix --skip-duplicate -p "$OVSX_PAT"
 
   github-release:
-    needs: [build, pypi, marketplace]
+    needs: [build, marketplace]
     if: github.ref_type == 'tag'
     runs-on: ubuntu-latest
     permissions:
