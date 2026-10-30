@@ -28,7 +28,10 @@ dev = ["pytest>=8"]
 dagshift = "dagshift.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/rk-chavali/dagshift"
+Homepage = "https://github.com/dagshift/dagshift"
+Repository = "https://github.com/dagshift/dagshift"
+Issues = "https://github.com/dagshift/dagshift/issues"
+Rules = "https://github.com/dagshift/dagshift/blob/main/docs/rules.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/dagshift"]

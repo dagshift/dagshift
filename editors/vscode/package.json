@@ -3,17 +3,17 @@
   "displayName": "dagshift: Airflow Upgrade Assistant",
   "description": "Detects the Airflow version your project runs, then upgrades DAGs, plugins and DAG configs to the version you pick (2.7 to 3.3), with a diff before anything is written.",
   "version": "0.1.0",
-  "publisher": "rk-chavali",
+  "publisher": "dagshift",
   "license": "Apache-2.0",
   "icon": "media/icon.png",
-  "homepage": "https://github.com/rk-chavali/dagshift",
+  "homepage": "https://github.com/dagshift/dagshift",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rk-chavali/dagshift.git",
+    "url": "https://github.com/dagshift/dagshift.git",
     "directory": "editors/vscode"
   },
   "bugs": {
-    "url": "https://github.com/rk-chavali/dagshift/issues"
+    "url": "https://github.com/dagshift/dagshift/issues"
   },
   "engines": {
     "vscode": "^1.90.0"
@@ -613,7 +613,7 @@
     "typecheck": "tsc --noEmit",
     "bundle-engine": "node scripts/bundle-engine.mjs",
     "test": "node esbuild.mjs --tests && node --test out/test/*.test.js",
-    "package": "npm run bundle-engine && vsce package --no-dependencies --baseContentUrl https://github.com/rk-chavali/dagshift/blob/HEAD/editors/vscode --baseImagesUrl https://github.com/rk-chavali/dagshift/raw/HEAD/editors/vscode"
+    "package": "npm run bundle-engine && vsce package --no-dependencies --baseContentUrl https://github.com/dagshift/dagshift/blob/HEAD/editors/vscode --baseImagesUrl https://github.com/dagshift/dagshift/raw/HEAD/editors/vscode"
   },
   "devDependencies": {
     "@types/node": "22.20.5",

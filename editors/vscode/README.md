@@ -98,4 +98,4 @@ Everything runs locally. The extension sends nothing anywhere; the only network 
 ## Command line
 
 The same engine is on PyPI: `pip install dagshift`, then `dagshift detect`, `dagshift check`, `dagshift migrate`
-and `dagshift validate`. See the [project README](https://github.com/rk-chavali/dagshift).
+and `dagshift validate`. See the [project README](https://github.com/dagshift/dagshift).

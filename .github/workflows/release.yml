@@ -103,7 +103,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: marketplace
-      url: https://marketplace.visualstudio.com/items?itemName=rk-chavali.dagshift
+      url: https://marketplace.visualstudio.com/items?itemName=dagshift.dagshift
     permissions:
       id-token: write
       contents: read
