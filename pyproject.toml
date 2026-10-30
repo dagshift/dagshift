@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dagshift"
-version = "0.1.0"
-description = "Upgrade Apache Airflow DAGs, plugins and configs from the version you run to any newer one (2.x to 2.y, 2 to 3, 3.x to 3.y), with version detection and Jinja-templated DAG factory support."
+version = "0.1.1"
+description = "The engine behind the dagshift VS Code extension: upgrades Apache Airflow DAGs, plugins and configs from the version you run to any newer one (2.x to 2.y, 2 to 3, 3.x to 3.y)."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
@@ -28,10 +28,11 @@ dev = ["pytest>=8"]
 dagshift = "dagshift.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/dagshift/dagshift"
+Homepage = "https://dagshift.github.io/dagshift/"
+Documentation = "https://dagshift.github.io/dagshift/"
 Repository = "https://github.com/dagshift/dagshift"
 Issues = "https://github.com/dagshift/dagshift/issues"
-Rules = "https://github.com/dagshift/dagshift/blob/main/docs/rules.md"
+Rules = "https://dagshift.github.io/dagshift/rules/"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/dagshift"]

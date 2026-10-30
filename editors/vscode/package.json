@@ -2,11 +2,15 @@
   "name": "dagshift",
   "displayName": "dagshift: Airflow Upgrade Assistant",
   "description": "Detects the Airflow version your project runs, then upgrades DAGs, plugins and DAG configs to the version you pick (2.7 to 3.3), with a diff before anything is written.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "dagshift",
   "license": "Apache-2.0",
   "icon": "media/icon.png",
-  "homepage": "https://github.com/dagshift/dagshift",
+  "galleryBanner": {
+    "color": "#16375f",
+    "theme": "dark"
+  },
+  "homepage": "https://dagshift.github.io/dagshift/",
   "repository": {
     "type": "git",
     "url": "https://github.com/dagshift/dagshift.git",
@@ -360,7 +364,7 @@
           "type": "string",
           "default": "",
           "scope": "machine-overridable",
-          "markdownDescription": "Python interpreter that already has `dagshift` installed. Leave empty to let the extension manage its own environment."
+          "markdownDescription": "Python interpreter that already has the dagshift engine installed. Leave empty to let the extension manage its own environment (recommended)."
         },
         "dagshift.bootstrapPython": {
           "type": "string",

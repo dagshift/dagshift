@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.1
+
+- Windows: the *Preview Upgrade Changes* button now shows in the editor title bar and the Explorer context
+  menu. It never appeared on Windows before.
+- Engine setup finds Python 3.14 and the plain `py -3` launcher on Windows, and `python3.14` on macOS and
+  Linux, when no older supported Python is installed.
+- More robust engine process handling: a crashed engine no longer raises an unhandled pipe error, and an
+  engine that fails to start is always stopped.
+- Validation no longer fails on non-UTF-8 output from a render command or the Airflow interpreter.
+- Rule codes in the Problems panel link to the new documentation site, https://dagshift.github.io/dagshift/.
+- Error messages no longer suggest installing the engine from PyPI, where it is not published.
+
 ## 0.1.0
 
 - First release.

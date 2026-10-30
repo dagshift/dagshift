@@ -1,0 +1,86 @@
+/* Colors taken from the extension icon (navy to teal). */
+:root {
+  --md-primary-fg-color: #135e72;
+  --md-primary-fg-color--light: #1b7c8f;
+  --md-primary-fg-color--dark: #16375f;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #118484;
+  --md-accent-fg-color--transparent: rgba(17, 132, 132, 0.1);
+  --ds-gradient: linear-gradient(135deg, #16375f 0%, #135e72 50%, #118484 100%);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #16375f;
+  --md-accent-fg-color: #2bb3a3;
+  --md-accent-fg-color--transparent: rgba(43, 179, 163, 0.12);
+  --md-typeset-a-color: #4cc9b8;
+}
+
+.md-header,
+.md-tabs {
+  background: var(--ds-gradient);
+}
+
+/* Landing page hero */
+.ds-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+}
+
+.md-typeset .ds-hero img.ds-logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(22, 55, 95, 0.35);
+}
+
+.md-typeset .ds-hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 1.2rem 0 0.4rem;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .ds-hero .ds-tagline {
+  font-size: 1.15rem;
+  max-width: 38rem;
+  margin: 0 auto 0.4rem;
+}
+
+.md-typeset .ds-hero .ds-sub {
+  color: var(--md-default-fg-color--light);
+  margin: 0 auto 1.4rem;
+}
+
+.md-typeset .ds-hero .md-button {
+  margin: 0.25rem;
+}
+
+/* Screenshots */
+.md-typeset img.ds-shot {
+  display: block;
+  margin: 1rem auto 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+}
+
+/* Severity markers */
+.md-typeset .ds-sev {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  margin-right: 0.35em;
+  vertical-align: middle;
+}
+.md-typeset .ds-sev.manual { background: #e5484d; }
+.md-typeset .ds-sev.warn { background: #f5a524; }
+.md-typeset .ds-sev.fixed { background: #30a46c; }
+.md-typeset .ds-sev.info { background: #3e8ed0; }
+
+/* Grid cards: a little more room */
+.md-typeset .grid.cards > ul > li {
+  padding: 1rem 1.1rem;
+}

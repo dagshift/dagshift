@@ -4,6 +4,11 @@ Open a folder with Airflow DAGs and dagshift tells you which Airflow version the
 change to reach the version you pick, and fixes everything that can be fixed safely. Nothing is written until you
 have seen the diff.
 
+**[Documentation](https://dagshift.github.io/dagshift/)** ·
+**[Get started](https://dagshift.github.io/dagshift/getting-started/)** ·
+**[All rules](https://dagshift.github.io/dagshift/rules/)** ·
+**[Report an issue](https://github.com/dagshift/dagshift/issues)**
+
 ![dagshift in VS Code](media/screenshots/overview.png)
 
 ## What it does
@@ -65,7 +70,7 @@ status bar, choose *Current version → Detect from another folder or file...* a
 
 ![Current version detected from a separate Terraform repository](media/screenshots/infra-repo.png)
 
-For the CLI and CI, keep both versions in the repository:
+For the whole team, keep both versions in the repository:
 
 ```toml
 # pyproject.toml
@@ -95,7 +100,8 @@ Fix on save: `"editor.codeActionsOnSave": { "source.fixAll.dagshift": "explicit"
 Everything runs locally. The extension sends nothing anywhere; the only network access is the one-time
 `pip install` of its engine's dependency (`libcst`) from your configured package index.
 
-## Command line
+## Learn more
 
-The same engine is on PyPI: `pip install dagshift`, then `dagshift detect`, `dagshift check`, `dagshift migrate`
-and `dagshift validate`. See the [project README](https://github.com/dagshift/dagshift).
+The [documentation](https://dagshift.github.io/dagshift/) covers every setting, command and rule, validation on a
+real Airflow install, Cloud Composer and MWAA cutovers, and how the rules are measured against real Airflow
+releases.

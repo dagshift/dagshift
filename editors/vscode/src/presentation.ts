@@ -2,7 +2,7 @@
 import * as vscode from "vscode";
 import type { Finding, Severity } from "./engineClient";
 
-export const RULES_URL = "https://github.com/dagshift/dagshift/blob/main/docs/rules.md";
+export const RULES_URL = "https://dagshift.github.io/dagshift/rules/";
 
 export function severityLabel(s: Severity): string {
   return { fixed: "auto-fix", manual: "needs you", warn: "behaviour change", info: "note" }[s];

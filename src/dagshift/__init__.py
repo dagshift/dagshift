@@ -18,7 +18,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from .engine import MigrationRun, classify, migrate_file_text, migrate_paths  # noqa: E402
 from .findings import FileResult, Finding, Severity  # noqa: E402

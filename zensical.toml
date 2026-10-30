@@ -1,0 +1,100 @@
+# Documentation site for the dagshift VS Code extension, built with Zensical and published to GitHub Pages
+# by .github/workflows/docs.yml.
+#
+# Local preview:
+#   pip install "zensical<0.1"
+#   python tools/docs_assets.py      # copies the icon and screenshots from editors/vscode/media
+#   zensical serve                   # http://localhost:8000
+
+[project]
+site_name = "dagshift"
+site_description = "Upgrade Apache Airflow DAGs to any newer version from VS Code: 2.x to 2.y, 2 to 3, 3.x to 3.y, with a diff before anything is written."
+site_author = "Rama Krishna Chavali"
+site_url = "https://dagshift.github.io/dagshift/"
+repo_url = "https://github.com/dagshift/dagshift"
+repo_name = "dagshift/dagshift"
+edit_uri = "edit/main/docs/"
+copyright = "Copyright &copy; 2026 dagshift contributors &middot; Apache-2.0"
+docs_dir = "docs"
+site_dir = "site"
+extra_css = ["stylesheets/extra.css"]
+
+nav = [
+  { "Home" = "index.md" },
+  { "Get started" = "getting-started.md" },
+  { "Guide" = [
+    { "Current and target version" = "guide/versions.md" },
+    { "Review findings" = "guide/review.md" },
+    { "Preview and upgrade" = "guide/upgrade.md" },
+    { "Validate on real Airflow" = "guide/validate.md" },
+    { "Composer, MWAA and dag-factory" = "guide/platforms.md" },
+  ] },
+  { "Reference" = [
+    { "Settings" = "reference/settings.md" },
+    { "Commands" = "reference/commands.md" },
+    { "Rules" = "rules.md" },
+  ] },
+  { "How it works" = "how-it-works.md" },
+  { "FAQ" = "faq.md" },
+]
+
+[project.theme]
+logo = "assets/icon.png"
+favicon = "assets/icon.png"
+features = [
+  "navigation.instant",
+  "navigation.instant.progress",
+  "navigation.tracking",
+  "navigation.tabs",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.footer",
+  "toc.follow",
+  "search.highlight",
+  "content.code.copy",
+  "content.tabs.link",
+  "content.action.edit",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle.icon = "material/weather-night"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle.icon = "material/weather-sunny"
+toggle.name = "Switch to light mode"
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/dagshift/dagshift"
+
+[[project.extra.social]]
+icon = "material/microsoft-visual-studio-code"
+link = "https://marketplace.visualstudio.com/items?itemName=dagshift.dagshift"
+
+[project.markdown_extensions]
+admonition = {}
+attr_list = {}
+def_list = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"

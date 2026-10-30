@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python: ["3.10", "3.11", "3.12", "3.13"]
+        python: ["3.10", "3.11", "3.12", "3.13", "3.14"]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -25,6 +25,18 @@ jobs:
       - run: pytest -q
       - name: docs/rules.md is up to date
         run: python tools/gen_rules_doc.py --check
+
+  engine-windows:
+    # Most extension users are on Windows: paths, encodings and the stdio protocol must hold there too.
+    name: engine (Windows)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - run: pytest -q --ignore=tests/test_real_airflow.py
 
   extension:
     runs-on: ubuntu-latest

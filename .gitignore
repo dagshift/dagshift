@@ -8,3 +8,6 @@ tools/provider-wheels/
 .ruff_cache/
 node_modules/
 *.vsix
+# documentation site: build output, and images copied in by tools/docs_assets.py
+site/
+docs/assets/

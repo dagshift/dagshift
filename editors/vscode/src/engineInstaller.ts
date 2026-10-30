@@ -105,13 +105,18 @@ async function findBasePython(log: vscode.LogOutputChannel, resource?: vscode.Ur
   if (fromExt) {
     candidates.push({ cmd: fromExt, pre: [], label: `${fromExt} (Python extension)` });
   }
+  // Best-tested versions first, then newer ones, then whatever the launcher or PATH defaults to.
   if (IS_WIN) {
-    for (const v of ["3.13", "3.12", "3.11", "3.10"]) {
+    for (const v of ["3.13", "3.12", "3.11", "3.10", "3.14"]) {
       candidates.push({ cmd: "py", pre: [`-${v}`], label: `py -${v}` });
     }
-    candidates.push({ cmd: "python", pre: [], label: "python" }, { cmd: "python3", pre: [], label: "python3" });
+    candidates.push(
+      { cmd: "py", pre: ["-3"], label: "py -3" },
+      { cmd: "python", pre: [], label: "python" },
+      { cmd: "python3", pre: [], label: "python3" },
+    );
   } else {
-    for (const name of ["python3.13", "python3.12", "python3.11", "python3.10", "python3", "python"]) {
+    for (const name of ["python3.13", "python3.12", "python3.11", "python3.10", "python3.14", "python3", "python"]) {
       candidates.push({ cmd: name, pre: [], label: name });
     }
   }
@@ -166,8 +171,9 @@ export class EngineInstaller {
       const v = await dagshiftVersion(interpreter);
       if (!v) {
         throw new Error(
-          `"dagshift.interpreter" is ${interpreter}, but dagshift is not installed there. ` +
-            `Install it with: ${interpreter} -m pip install dagshift`,
+          `"dagshift.interpreter" is ${interpreter}, but the dagshift engine is not installed there. ` +
+            `Clear the setting to let the extension manage its own engine (recommended), or install it with: ` +
+            `${interpreter} -m pip install "git+https://github.com/dagshift/dagshift"`,
         );
       }
       this.log.info(`Using dagshift ${v} from ${interpreter}`);
@@ -212,7 +218,13 @@ export class EngineInstaller {
         }
 
         progress.report({ message: "installing dagshift" });
-        const spec = wheel ? wheel.file : `dagshift==${want}`;
+        if (!wheel) {
+          throw new Error(
+            "This build of the extension has no bundled engine. Reinstall dagshift from the Marketplace, or " +
+              "when running from source, run `npm run bundle-engine` in editors/vscode first.",
+          );
+        }
+        const spec = wheel.file;
         this.log.info(`Installing ${spec} into ${envDir}`);
         if (uv) {
           await run(uv, ["pip", "install", "--python", py, spec], 900_000);

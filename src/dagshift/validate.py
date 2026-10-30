@@ -115,7 +115,8 @@ def validate(
         target = folder
         if render_cmd:
             shutil.copytree(folder.parent, work, ignore=shutil.ignore_patterns(".git", ".venv", "__pycache__"))
-            proc = subprocess.run(render_cmd, shell=True, cwd=work, capture_output=True, text=True, timeout=timeout)
+            proc = subprocess.run(render_cmd, shell=True, cwd=work, capture_output=True, text=True,
+                                  encoding="utf-8", errors="replace", timeout=timeout)
             if proc.returncode != 0:
                 return ValidationResult(None, fatal=f"render command failed ({proc.returncode}): "
                                                     f"{(proc.stderr or proc.stdout)[-2000:]}")
@@ -140,7 +141,7 @@ def validate(
         if env:
             child_env.update(env)
         proc = subprocess.run([airflow_python, str(script), str(out), str(target)], env=child_env,
-                              capture_output=True, text=True, timeout=timeout)
+                              capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=timeout)
         if not out.exists():
             return ValidationResult(None, fatal=f"validator crashed: {proc.stderr[-2000:]}")
         data = json.loads(out.read_text())

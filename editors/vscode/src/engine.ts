@@ -44,7 +44,11 @@ export class Engine implements vscode.Disposable {
       cwd: vscode.workspace.workspaceFolders?.[0]?.uri.fsPath,
       log: (line) => this.log.debug(line),
     });
-    const info = await client.start();
+    const info = await client.start().catch(async (err: unknown) => {
+      // a process that started but never answered would otherwise be left running
+      await client.dispose();
+      throw err;
+    });
     this.log.info(
       `dagshift ${info.version} engine running (${cmd.source}); targets ${info.targets.map((t) => t.target).join(", ")}`,
     );

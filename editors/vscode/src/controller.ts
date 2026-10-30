@@ -319,7 +319,9 @@ export class Controller implements vscode.Disposable {
 
   private updateContext(): void {
     const t = this.model.totals();
-    const changed = this.model.changedEntries().map((e) => e.uri.path);
+    // `resourcePath` in when-clauses is the file-system path (backslashes and a drive letter on Windows), so
+    // list both forms; with only uri.path, the Preview buttons never showed on Windows.
+    const changed = this.model.changedEntries().flatMap((e) => [e.uri.path, e.uri.fsPath]);
     void vscode.commands.executeCommand("setContext", "dagshift.hasFindings", t.fixable + t.manual + t.warn + t.info > 0);
     void vscode.commands.executeCommand("setContext", "dagshift.hasChanges", changed.length > 0);
     void vscode.commands.executeCommand("setContext", "dagshift.changedFiles", changed);

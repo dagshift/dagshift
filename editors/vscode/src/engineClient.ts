@@ -166,6 +166,9 @@ export class EngineClient {
       this.proc = proc;
       log(`engine: started ${this.opts.command} ${this.opts.args.join(" ")} (pid ${proc.pid})`);
       proc.stdin.setDefaultEncoding("utf8");
+      // Writing to an engine that just died emits EPIPE here; without a listener Node treats it as an
+      // uncaught error in the extension host. The exit handler already fails the pending requests.
+      proc.stdin.on("error", (err) => log(`engine: stdin closed: ${err.message}`));
       readline.createInterface({ input: proc.stdout }).on("line", (line) => this.onLine(line));
       readline.createInterface({ input: proc.stderr }).on("line", (line) => log(`engine: ${line}`));
       proc.on("error", (err) => {
