@@ -1,6 +1,7 @@
 import json
 import subprocess
 import sys
+from pathlib import Path
 
 import pytest
 
@@ -40,7 +41,8 @@ def test_check_returns_absolute_paths_and_no_bodies(server):
     res = server("check", root=ROOT, options={"startDate": "2026-10-29"})["result"]
     assert res["summary"]["files_changed"] >= 10
     paths = {f["path"] for f in res["files"]}
-    assert f"{ROOT}/dags/classic_operators.py" in paths
+    # the engine returns native absolute paths (backslashes on Windows), so build the expectation the same way
+    assert str(Path(ROOT) / "dags" / "classic_operators.py") in paths
     assert all("migrated" not in f for f in res["files"])
     assert all(f["findings"][0]["absPath"] == f["path"] for f in res["files"] if f["findings"])
     assert res["projectFindings"][0]["absPath"].endswith("requirements.txt")
@@ -118,7 +120,8 @@ def test_write_copy_inside_the_project_is_not_scanned_again(server, tmp_path):
     res = server("writeCopy", root=str(src), outDir=str(out))["result"]
     assert res["ok"] and not (out / "upgraded").exists()
     check = server("check", root=str(src))["result"]
-    assert not any("/upgraded/" in f["path"] for f in check["files"])
+    # compare path components, not a "/upgraded/" substring, which never matches a Windows path
+    assert check["files"] and not any("upgraded" in Path(f["path"]).parts for f in check["files"])
     # the copy itself, opened on its own, is scanned (and has nothing left to fix automatically)
     own = server("check", root=str(out))["result"]
     assert own["files"] and not any(f["changed"] for f in own["files"])
