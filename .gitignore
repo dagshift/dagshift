@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+tools/provider-wheels/
+.ruff_cache/
+node_modules/
+*.vsix

@@ -1,0 +1,7 @@
+{
+  "dag_id": "json_pipeline",
+  "schedule_interval": "@daily",
+  "tasks": [
+    {"task_id": "load", "operator": "airflow.operators.bash.BashOperator", "bash_command": "load {{ execution_date }} {{ tomorrow_ds_nodash }}"}
+  ]
+}

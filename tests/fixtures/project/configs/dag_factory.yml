@@ -1,0 +1,27 @@
+# dag-factory config (Airflow 2 style)
+default:
+  default_args:
+    owner: data-eng
+    retries: 1
+    task_concurrency: 2
+  schedule_interval: "0 3 * * *"
+  concurrency: 8
+
+ingest_orders:
+  description: "Load orders"
+  default_view: graph
+  sla_miss_callback: alerts.on_sla_miss
+  tasks:
+    extract:
+      operator: airflow.operators.bash_operator.BashOperator
+      bash_command: "extract.sh {{ execution_date }} {{ yesterday_ds }}"
+    transform:
+      operator: airflow.operators.python_operator.PythonOperator
+      python_callable_name: transform
+      python_callable_file: /opt/airflow/dags/callables.py
+      provide_context: true
+      dependencies: [extract]
+    publish:
+      operator: airflow.operators.dagrun_operator.TriggerDagRunOperator
+      trigger_dag_id: publish_orders
+      dependencies: [transform]

@@ -1,0 +1,626 @@
+{
+  "name": "dagshift",
+  "displayName": "dagshift: Airflow Upgrade Assistant",
+  "description": "Detects the Airflow version your project runs, then upgrades DAGs, plugins and DAG configs to the version you pick (2.7 to 3.3), with a diff before anything is written.",
+  "version": "0.1.0",
+  "publisher": "rk-chavali",
+  "license": "Apache-2.0",
+  "icon": "media/icon.png",
+  "homepage": "https://github.com/rk-chavali/dagshift",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rk-chavali/dagshift.git",
+    "directory": "editors/vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/rk-chavali/dagshift/issues"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Linters",
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "airflow",
+    "apache airflow",
+    "airflow upgrade",
+    "airflow 3",
+    "dag",
+    "migration",
+    "cloud composer",
+    "mwaa",
+    "dag-factory"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "workspaceContains:**/dags/**/*.py",
+    "workspaceContains:**/*dag*.py",
+    "workspaceContains:**/airflow.cfg",
+    "workspaceContains:**/dagshift.toml",
+    "onLanguage:python"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "In Restricted Mode dagshift ignores workspace-level interpreter and validation settings, and DAG validation (which runs your DAG files) is disabled.",
+      "restrictedConfigurations": [
+        "dagshift.interpreter",
+        "dagshift.bootstrapPython",
+        "dagshift.validate.airflowPython",
+        "dagshift.validate.renderCommand",
+        "dagshift.validate.pythonPath",
+        "dagshift.upgrade.outputFolder"
+      ]
+    },
+    "virtualWorkspaces": false
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "dagshift.selectVersions",
+        "title": "Select Current and Target Airflow Versions...",
+        "category": "dagshift",
+        "icon": "$(versions)"
+      },
+      {
+        "command": "dagshift.selectSource",
+        "title": "Select Current Airflow Version...",
+        "category": "dagshift"
+      },
+      {
+        "command": "dagshift.scanWorkspace",
+        "title": "Scan Workspace for Airflow Upgrade Issues",
+        "category": "dagshift",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "dagshift.migrateWorkspace",
+        "title": "Upgrade Workspace...",
+        "category": "dagshift",
+        "icon": "$(rocket)"
+      },
+      {
+        "command": "dagshift.migrateFolder",
+        "title": "Upgrade Folder...",
+        "category": "dagshift"
+      },
+      {
+        "command": "dagshift.upgradeToFolder",
+        "title": "Write Upgraded Copy to a Folder...",
+        "category": "dagshift",
+        "icon": "$(files)"
+      },
+      {
+        "command": "dagshift.compareUpgradedCopy",
+        "title": "Compare Upgraded Copy with Originals",
+        "category": "dagshift",
+        "icon": "$(diff-multiple)"
+      },
+      {
+        "command": "dagshift.previewFile",
+        "title": "Preview Upgrade Changes",
+        "category": "dagshift",
+        "icon": "$(diff)"
+      },
+      {
+        "command": "dagshift.applyFile",
+        "title": "Apply Upgrade Fixes to File",
+        "category": "dagshift",
+        "icon": "$(check)"
+      },
+      {
+        "command": "dagshift.applyFromPreview",
+        "title": "Apply These Changes",
+        "category": "dagshift",
+        "icon": "$(check)"
+      },
+      {
+        "command": "dagshift.showReport",
+        "title": "Show Upgrade Report",
+        "category": "dagshift",
+        "icon": "$(book)"
+      },
+      {
+        "command": "dagshift.exportReport",
+        "title": "Export Upgrade Report...",
+        "category": "dagshift"
+      },
+      {
+        "command": "dagshift.selectTarget",
+        "title": "Select Target Airflow Version...",
+        "category": "dagshift"
+      },
+      {
+        "command": "dagshift.validate",
+        "title": "Validate DAGs on Target Airflow...",
+        "category": "dagshift",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "dagshift.showRecipe",
+        "title": "Show How to Fix",
+        "category": "dagshift"
+      },
+      {
+        "command": "dagshift.ignoreRule",
+        "title": "Ignore Rule in This Workspace",
+        "category": "dagshift"
+      },
+      {
+        "command": "dagshift.restartEngine",
+        "title": "Restart Engine",
+        "category": "dagshift"
+      },
+      {
+        "command": "dagshift.setupEngine",
+        "title": "Reinstall Engine",
+        "category": "dagshift"
+      },
+      {
+        "command": "dagshift.showLog",
+        "title": "Show Log",
+        "category": "dagshift"
+      }
+    ],
+    "configuration": {
+      "title": "dagshift",
+      "properties": {
+        "dagshift.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable dagshift in this workspace."
+        },
+        "dagshift.target": {
+          "type": "string",
+          "enum": [
+            "2.7",
+            "2.8",
+            "2.9",
+            "2.10",
+            "2.11",
+            "3.0",
+            "3.1",
+            "3.2",
+            "3.3"
+          ],
+          "default": "3.3",
+          "markdownDescription": "Airflow version to upgrade to. Every rule is verified against a real install of this version. When not set here, `target` from the project's `dagshift.toml` or `[tool.dagshift]` is used."
+        },
+        "dagshift.sourceVersion": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "1.10",
+            "2.0",
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4",
+            "2.5",
+            "2.6",
+            "2.7",
+            "2.8",
+            "2.9",
+            "2.10",
+            "2.11",
+            "3.0",
+            "3.1",
+            "3.2",
+            "3.3"
+          ],
+          "enumDescriptions": [
+            "Detect from requirements, Docker images, compose, Helm, Composer/MWAA Terraform and the code",
+            "The project runs Airflow 1.10 today",
+            "The project runs Airflow 2.0 today",
+            "The project runs Airflow 2.1 today",
+            "The project runs Airflow 2.2 today",
+            "The project runs Airflow 2.3 today",
+            "The project runs Airflow 2.4 today",
+            "The project runs Airflow 2.5 today",
+            "The project runs Airflow 2.6 today",
+            "The project runs Airflow 2.7 today",
+            "The project runs Airflow 2.8 today",
+            "The project runs Airflow 2.9 today",
+            "The project runs Airflow 2.10 today",
+            "The project runs Airflow 2.11 today",
+            "The project runs Airflow 3.0 today",
+            "The project runs Airflow 3.1 today",
+            "The project runs Airflow 3.2 today",
+            "The project runs Airflow 3.3 today"
+          ],
+          "default": "auto",
+          "markdownDescription": "Airflow version the project runs **today**. `auto` detects it; pick a version when the environment is defined somewhere dagshift cannot see (for example a separate Terraform repository)."
+        },
+        "dagshift.sourcePaths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "scope": "resource",
+          "markdownDescription": "Extra files or folders to read the current Airflow version from, such as the Terraform repository that defines your Cloud Composer or MWAA environment. Paths may be absolute or relative to the workspace folder."
+        },
+        "dagshift.upgrade.output": {
+          "type": "string",
+          "enum": [
+            "ask",
+            "inPlace",
+            "folder"
+          ],
+          "enumDescriptions": [
+            "Ask every time: edit in place or write an upgraded copy.",
+            "Edit the files in place, after reviewing them in the refactor preview.",
+            "Write an upgraded copy to dagshift.upgrade.outputFolder and leave the originals untouched."
+          ],
+          "default": "ask",
+          "scope": "resource",
+          "markdownDescription": "What *Upgrade Workspace* and *Upgrade Folder* do with the upgraded files."
+        },
+        "dagshift.upgrade.outputFolder": {
+          "type": "string",
+          "default": "${folderName}-airflow-${target}",
+          "scope": "resource",
+          "markdownDescription": "Where an upgraded copy goes. A relative path is placed next to the folder being upgraded; an absolute path is used as is. Variables: `${folderName}`, `${target}`, `${source}`. The folder must be empty or hold an earlier dagshift copy, which is replaced after you confirm."
+        },
+        "dagshift.scanOnOpen": {
+          "type": "boolean",
+          "default": true,
+          "description": "Scan the workspace automatically when a folder containing Airflow code is opened. Files are never changed without your confirmation."
+        },
+        "dagshift.lintOnType": {
+          "type": "boolean",
+          "default": true,
+          "description": "Re-check open files as you type."
+        },
+        "dagshift.lintDelay": {
+          "type": "number",
+          "default": 700,
+          "minimum": 100,
+          "description": "Milliseconds to wait after typing stops before re-checking a file."
+        },
+        "dagshift.showSummaryNotification": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a notification with the findings after the first scan of a workspace."
+        },
+        "dagshift.showInfo": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show informational findings (behaviour notes) in the Problems panel."
+        },
+        "dagshift.codeLens": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a CodeLens with Preview / Apply at the top of files that dagshift can migrate."
+        },
+        "dagshift.startDate": {
+          "type": "string",
+          "default": "",
+          "pattern": "^$|^\\d{4}-\\d{2}-\\d{2}$",
+          "markdownDescription": "Date used to turn `days_ago(n)` into a fixed `start_date` (YYYY-MM-DD). Empty means today."
+        },
+        "dagshift.modernize": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Also update code that still works on the target but is deprecated there or has a newer home (for example `schedule_interval` on 2.x targets, `airflow.sdk` imports on 3.x)."
+        },
+        "dagshift.preserveScheduleDefault": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "When an upgrade crosses into Airflow 3, add `schedule=timedelta(days=1)` to DAGs without a schedule, because Airflow 2 ran them daily and Airflow 3 never schedules them (DS208)."
+        },
+        "dagshift.pinCatchup": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Add `catchup=True` where catchup was implicit (the Airflow 2 default) (DS209)."
+        },
+        "dagshift.keepCronDataIntervals": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Wrap cron and timedelta schedules in `CronDataIntervalTimetable` / `DeltaDataIntervalTimetable` so `ds`, `logical_date` and `data_interval_*` keep their Airflow 2 meaning (DS503)."
+        },
+        "dagshift.renameConfigKeys": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Rename Airflow 2 parameter keys (such as `schedule_interval`) in YAML/JSON configs that are not dag-factory files (DS704)."
+        },
+        "dagshift.migrateStrings": {
+          "type": "boolean",
+          "default": true,
+          "description": "Migrate Airflow code embedded in string literals (code generators)."
+        },
+        "dagshift.select": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Only run these rule ids or prefixes (for example DS1, DS201). Empty runs everything."
+        },
+        "dagshift.ignore": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Rule ids or prefixes to skip."
+        },
+        "dagshift.exclude": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Path globs (relative to the workspace folder) that dagshift should not scan."
+        },
+        "dagshift.interpreter": {
+          "type": "string",
+          "default": "",
+          "scope": "machine-overridable",
+          "markdownDescription": "Python interpreter that already has `dagshift` installed. Leave empty to let the extension manage its own environment."
+        },
+        "dagshift.bootstrapPython": {
+          "type": "string",
+          "default": "",
+          "scope": "machine-overridable",
+          "description": "Python 3.10+ used to create the extension's managed environment. Empty means: the Python extension's interpreter, then python3 / python on PATH."
+        },
+        "dagshift.validate.airflowPython": {
+          "type": "string",
+          "default": "",
+          "scope": "machine-overridable",
+          "description": "Python interpreter of an environment with the target Airflow version installed, used by 'Validate DAGs on Target Airflow'."
+        },
+        "dagshift.validate.dagFolder": {
+          "type": "string",
+          "default": "",
+          "description": "DAG folder to validate, relative to the workspace folder (for example dags)."
+        },
+        "dagshift.validate.renderCommand": {
+          "type": "string",
+          "default": "",
+          "description": "Shell command that renders templated DAGs before validation. It runs in a temporary copy of the DAG folder's parent, never in your workspace."
+        },
+        "dagshift.validate.pythonPath": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Extra import roots for DAG files during validation, relative to the workspace folder."
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "dagshift",
+          "title": "Airflow Upgrade",
+          "icon": "media/activity.svg"
+        }
+      ]
+    },
+    "views": {
+      "dagshift": [
+        {
+          "id": "dagshift.findings",
+          "name": "Findings",
+          "icon": "media/activity.svg"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "dagshift.findings",
+        "contents": "Scanning for Airflow code...",
+        "when": "dagshift.scanning"
+      },
+      {
+        "view": "dagshift.findings",
+        "contents": "No Airflow code detected in this workspace yet.\n[Scan Workspace](command:dagshift.scanWorkspace)\nOpen a folder with DAGs, plugins or DAG configs to get started.",
+        "when": "!dagshift.scanning && !dagshift.airflowDetected"
+      },
+      {
+        "view": "dagshift.findings",
+        "contents": "Nothing left to change for this upgrade.\n[Change Versions](command:dagshift.selectVersions)\n[Validate DAGs on Target Airflow](command:dagshift.validate)",
+        "when": "!dagshift.scanning && dagshift.airflowDetected && !dagshift.hasFindings"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "dagshift.migrateWorkspace",
+          "when": "view == dagshift.findings && dagshift.hasChanges",
+          "group": "navigation@1"
+        },
+        {
+          "command": "dagshift.showReport",
+          "when": "view == dagshift.findings",
+          "group": "navigation@2"
+        },
+        {
+          "command": "dagshift.validate",
+          "when": "view == dagshift.findings",
+          "group": "navigation@3"
+        },
+        {
+          "command": "dagshift.selectVersions",
+          "when": "view == dagshift.findings",
+          "group": "navigation@4"
+        },
+        {
+          "command": "dagshift.scanWorkspace",
+          "when": "view == dagshift.findings",
+          "group": "navigation@5"
+        },
+        {
+          "command": "dagshift.exportReport",
+          "when": "view == dagshift.findings",
+          "group": "more@1"
+        },
+        {
+          "command": "dagshift.compareUpgradedCopy",
+          "when": "view == dagshift.findings && dagshift.hasUpgradedCopy",
+          "group": "navigation@4"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "dagshift.previewFile",
+          "when": "view == dagshift.findings && viewItem == file-changed",
+          "group": "inline@1"
+        },
+        {
+          "command": "dagshift.applyFile",
+          "when": "view == dagshift.findings && viewItem == file-changed",
+          "group": "inline@2"
+        },
+        {
+          "command": "dagshift.showRecipe",
+          "when": "view == dagshift.findings && viewItem =~ /^finding-(manual|warn|info)$/",
+          "group": "inline@1"
+        },
+        {
+          "command": "dagshift.ignoreRule",
+          "when": "view == dagshift.findings && viewItem =~ /^finding-/",
+          "group": "rule@1"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "dagshift.migrateFolder",
+          "when": "explorerResourceIsFolder && dagshift.airflowDetected",
+          "group": "7_modification@9"
+        },
+        {
+          "command": "dagshift.upgradeToFolder",
+          "when": "explorerResourceIsFolder && dagshift.airflowDetected",
+          "group": "7_modification@10"
+        },
+        {
+          "command": "dagshift.previewFile",
+          "when": "!explorerResourceIsFolder && resourcePath in dagshift.changedFiles",
+          "group": "7_modification@9"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "dagshift.previewFile",
+          "when": "resourceScheme == file && resourcePath in dagshift.changedFiles",
+          "group": "navigation@90"
+        },
+        {
+          "command": "dagshift.applyFromPreview",
+          "when": "resourceScheme == dagshift-migrated",
+          "group": "navigation@1"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "dagshift.showRecipe",
+          "when": "false"
+        },
+        {
+          "command": "dagshift.ignoreRule",
+          "when": "false"
+        },
+        {
+          "command": "dagshift.migrateFolder",
+          "when": "false"
+        },
+        {
+          "command": "dagshift.applyFromPreview",
+          "when": "resourceScheme == dagshift-migrated"
+        },
+        {
+          "command": "dagshift.previewFile",
+          "when": "resourceScheme == file"
+        },
+        {
+          "command": "dagshift.applyFile",
+          "when": "resourceScheme == file"
+        },
+        {
+          "command": "dagshift.compareUpgradedCopy",
+          "when": "dagshift.hasUpgradedCopy"
+        }
+      ]
+    },
+    "walkthroughs": [
+      {
+        "id": "dagshift.getStarted",
+        "title": "Upgrade Airflow DAGs to a newer Airflow",
+        "description": "Detect the current version, pick a target, review, upgrade and validate, without leaving the editor.",
+        "steps": [
+          {
+            "id": "versions",
+            "title": "Confirm the current version and pick a target",
+            "description": "dagshift reads the current Airflow version from requirements, Docker images, Helm, Composer/MWAA Terraform and the code. If your infrastructure lives in another repository, point dagshift at it or pick the version yourself.\n[Select Versions](command:dagshift.selectVersions)",
+            "media": {
+              "markdown": "media/walkthrough/versions.md"
+            },
+            "completionEvents": [
+              "onCommand:dagshift.selectVersions",
+              "onCommand:dagshift.selectTarget",
+              "onCommand:dagshift.selectSource"
+            ]
+          },
+          {
+            "id": "review",
+            "title": "Review what needs to change",
+            "description": "Every finding is in the Problems panel and the Airflow Upgrade view. Red items need a decision from you; everything else dagshift can fix.\n[Open Findings](command:dagshift.findings.focus)",
+            "media": {
+              "markdown": "media/walkthrough/review.md"
+            },
+            "completionEvents": [
+              "onView:dagshift.findings"
+            ]
+          },
+          {
+            "id": "migrate",
+            "title": "Preview and apply",
+            "description": "Preview one file as a diff, or upgrade the whole workspace through VS Code's refactor preview, where you can untick any file.\n[Upgrade Workspace](command:dagshift.migrateWorkspace)",
+            "media": {
+              "markdown": "media/walkthrough/migrate.md"
+            },
+            "completionEvents": [
+              "onCommand:dagshift.migrateWorkspace",
+              "onCommand:dagshift.applyFile"
+            ]
+          },
+          {
+            "id": "validate",
+            "title": "Prove it loads on the target Airflow",
+            "description": "Point dagshift at a Python environment with the target Airflow installed and it parses your DAG folder with Airflow's own DagBag.\n[Validate DAGs](command:dagshift.validate)",
+            "media": {
+              "markdown": "media/walkthrough/validate.md"
+            },
+            "completionEvents": [
+              "onCommand:dagshift.validate"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "node esbuild.mjs --production",
+    "watch": "node esbuild.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "bundle-engine": "node scripts/bundle-engine.mjs",
+    "test": "node esbuild.mjs --tests && node --test out/test/*.test.js",
+    "package": "npm run bundle-engine && vsce package --no-dependencies --baseContentUrl https://github.com/rk-chavali/dagshift/blob/HEAD/editors/vscode --baseImagesUrl https://github.com/rk-chavali/dagshift/raw/HEAD/editors/vscode"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/vscode": "1.90.0",
+    "@vscode/vsce": "4.1.0",
+    "esbuild": "0.28.2",
+    "ovsx": "1.3.0",
+    "typescript": "5.9.3"
+  }
+}

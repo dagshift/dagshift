@@ -1,0 +1,148 @@
+# Release: push a tag like v0.1.0 (the version in pyproject.toml and editors/vscode/package.json).
+#
+# Publishes the engine to PyPI and the extension to the VS Code Marketplace with trusted publishing
+# (GitHub OIDC, no stored tokens), the extension to Open VSX with a token, and attaches everything to a
+# GitHub release. Run it by hand (Actions > release > Run workflow) to build without publishing.
+#
+# One-time setup: see PUBLISHING.md.
+
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish (otherwise build and test only)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: editors/vscode/package-lock.json
+
+      - name: versions agree
+        id: version
+        run: |
+          py=$(python -c "import tomllib;print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
+          ext=$(node -p "require('./editors/vscode/package.json').version")
+          echo "pyproject.toml $py, package.json $ext, ref $GITHUB_REF_NAME"
+          [ "$py" = "$ext" ] || { echo "::error::pyproject.toml ($py) and package.json ($ext) differ"; exit 1; }
+          if [ "$GITHUB_REF_TYPE" = "tag" ] && [ "$GITHUB_REF_NAME" != "v$py" ]; then
+            echo "::error::tag $GITHUB_REF_NAME does not match version $py"; exit 1
+          fi
+          echo "version=$py" >> "$GITHUB_OUTPUT"
+
+      - name: test the engine
+        run: |
+          pip install build -e ".[dev]"
+          pytest -q
+          python tools/gen_rules_doc.py --check
+
+      - name: build the engine
+        run: python -m build --outdir dist .
+
+      - name: test and package the extension (bundles the wheel built above)
+        working-directory: editors/vscode
+        run: |
+          npm ci
+          npm run typecheck
+          DAGSHIFT_PYTHON="$(which python)" npm test
+          rm -rf engine && mkdir engine && cp ../../dist/*.whl engine/
+          npx vsce package --no-dependencies \
+            --baseContentUrl "https://github.com/${GITHUB_REPOSITORY}/blob/${GITHUB_SHA}/editors/vscode" \
+            --baseImagesUrl "https://github.com/${GITHUB_REPOSITORY}/raw/${GITHUB_SHA}/editors/vscode" \
+            -o "../../dist/dagshift-${{ steps.version.outputs.version }}.vsix"
+
+      - name: the VSIX installs its engine
+        run: |
+          unzip -l dist/*.vsix | grep -E "extension/engine/dagshift-.*-py3-none-any\.whl"
+          unzip -l dist/*.vsix | grep -E "extension/dist/extension\.js"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist/
+
+  pypi:
+    needs: build
+    if: github.ref_type == 'tag' || inputs.publish
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/dagshift/${{ needs.build.outputs.version }}/
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist
+      - run: rm dist/*.vsix
+      - uses: pypa/gh-action-pypi-publish@release/v1
+
+  marketplace:
+    needs: [build, pypi]
+    if: github.ref_type == 'tag' || inputs.publish
+    runs-on: ubuntu-latest
+    environment:
+      name: marketplace
+      url: https://marketplace.visualstudio.com/items?itemName=rk-chavali.dagshift
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: editors/vscode/package-lock.json
+      - run: npm ci
+        working-directory: editors/vscode
+      - uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist
+      - name: VS Code Marketplace (trusted publishing)
+        working-directory: editors/vscode
+        run: npx vsce publish --oidc --skip-duplicate --packagePath ../../dist/*.vsix
+      - name: Open VSX
+        working-directory: editors/vscode
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+        run: |
+          if [ -z "$OVSX_PAT" ]; then echo "::warning::OVSX_PAT not set; skipping Open VSX"; exit 0; fi
+          npx ovsx publish --packagePath ../../dist/*.vsix --skip-duplicate -p "$OVSX_PAT"
+
+  github-release:
+    needs: [build, pypi, marketplace]
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist
+      - uses: softprops/action-gh-release@v3
+        with:
+          files: dist/*
+          generate_release_notes: true

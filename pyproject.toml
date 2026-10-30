@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dagshift"
+version = "0.1.0"
+description = "Upgrade Apache Airflow DAGs, plugins and configs from the version you run to any newer one (2.x to 2.y, 2 to 3, 3.x to 3.y), with version detection and Jinja-templated DAG factory support."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Rama Krishna Chavali" }]
+keywords = ["airflow", "airflow3", "upgrade", "migration", "dags", "codemod", "composer", "mwaa", "libcst"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: Apache Airflow",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Code Generators",
+]
+dependencies = ["libcst>=1.4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+dagshift = "dagshift.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rk-chavali/dagshift"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dagshift"]
+
+[tool.hatch.build.targets.sdist]
+# the engine only; the VS Code extension is released separately
+include = ["/src", "/tests", "/tools/*.py", "/tools/*.json", "/tools/README.md", "/docs", "/README.md", "/LICENSE", "/pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

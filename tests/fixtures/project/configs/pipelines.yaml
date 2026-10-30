@@ -1,0 +1,11 @@
+# Homegrown pipeline config read by our own generator.
+pipelines:
+  - name: customers
+    schedule_interval: "@daily"
+    operator_class: airflow.operators.python.PythonOperator
+    sql: "select * from customers where day = '{{ ds }}' or day = '{{ yesterday_ds }}'"
+    provide_context: true
+  - name: payments
+    interval: "0 * * * *"
+    operator_class: airflow.providers.google.cloud.operators.bigquery.BigQueryInsertJobOperator
+    window_end: "{{ next_execution_date }}"

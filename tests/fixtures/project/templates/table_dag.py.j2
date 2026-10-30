@@ -1,0 +1,17 @@
+{# Rendered by our build: one DAG per table config. Jinja in code positions. #}
+from airflow import DAG
+from airflow.operators.bash_operator import BashOperator
+from airflow.utils.dates import days_ago
+
+with DAG(
+    dag_id="{{ dag_id }}",
+    schedule_interval={{ schedule | tojson }},
+    start_date=days_ago(1),
+    catchup=False,
+) as dag:
+{% for step in steps %}
+    {{ step.name }} = BashOperator(
+        task_id="{{ step.name }}",
+        bash_command="{% raw %}run {{ execution_date }} {{ next_ds_nodash }}{% endraw %} {{ step.cmd }}",
+    )
+{% endfor %}

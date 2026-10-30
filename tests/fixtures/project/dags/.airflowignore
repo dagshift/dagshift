@@ -1,0 +1,3 @@
+# skip scratch files
+.*_scratch\.py
+tests/

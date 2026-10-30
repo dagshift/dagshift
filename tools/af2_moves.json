@@ -1,0 +1,4607 @@
+{
+ "airflow.config_templates.default_celery.DEFAULT_CELERY_CONFIG": {
+  "af2_target": "airflow.providers.celery.executors.default_celery.DEFAULT_CELERY_CONFIG",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-celery",
+  "version": "3.26.0"
+ },
+ "airflow.contrib.hooks.aws_athena_hook.AWSAthenaHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.athena.AthenaHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_datasync_hook.AWSDataSyncHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.datasync.DataSyncHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_dynamodb_hook.AwsDynamoDBHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.dynamodb.DynamoDBHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_firehose_hook.FirehoseHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.kinesis.FirehoseHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_glue_catalog_hook.AwsGlueCatalogHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.glue_catalog.GlueCatalogHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_hook.AwsBaseHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.base_aws.AwsBaseHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_hook.AwsHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.base_aws.AwsBaseHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_hook._parse_s3_config": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.base_aws._parse_s3_config",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.amazon.aws.hooks.base_aws._parse_s3_config, which no longer exists in apache-airflow-providers-amazon 9.39.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_hook.boto3": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.base_aws.boto3",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_lambda_hook.AwsLambdaHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.lambda_function.LambdaHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_logs_hook.AwsLogsHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.logs.AwsLogsHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_sns_hook.AwsSnsHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.sns.SnsHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_sqs_hook.SQSHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.sqs.SqsHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.aws_sqs_hook.SqsHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.sqs.SqsHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.azure_container_instance_hook.AzureContainerInstanceHook": {
+  "af2_target": "airflow.providers.microsoft.azure.hooks.container_instance.AzureContainerInstanceHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.hooks.azure_container_registry_hook.AzureContainerRegistryHook": {
+  "af2_target": "airflow.providers.microsoft.azure.hooks.container_registry.AzureContainerRegistryHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.hooks.azure_container_volume_hook.AzureContainerVolumeHook": {
+  "af2_target": "airflow.providers.microsoft.azure.hooks.container_volume.AzureContainerVolumeHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.hooks.azure_cosmos_hook.AzureCosmosDBHook": {
+  "af2_target": "airflow.providers.microsoft.azure.hooks.cosmos.AzureCosmosDBHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.hooks.azure_data_lake_hook.AzureDataLakeHook": {
+  "af2_target": "airflow.providers.microsoft.azure.hooks.data_lake.AzureDataLakeHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.hooks.azure_fileshare_hook.AzureFileShareHook": {
+  "af2_target": "airflow.providers.microsoft.azure.hooks.fileshare.AzureFileShareHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.hooks.bigquery_hook.BigQueryBaseCursor": {
+  "af2_target": "airflow.providers.google.cloud.hooks.bigquery.BigQueryBaseCursor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.bigquery_hook.BigQueryConnection": {
+  "af2_target": "airflow.providers.google.cloud.hooks.bigquery.BigQueryConnection",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.bigquery_hook.BigQueryCursor": {
+  "af2_target": "airflow.providers.google.cloud.hooks.bigquery.BigQueryCursor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.bigquery_hook.BigQueryHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.bigquery.BigQueryHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.bigquery_hook.GbqConnector": {
+  "af2_target": "airflow.providers.google.cloud.hooks.bigquery.GbqConnector",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.cassandra_hook.CassandraHook": {
+  "af2_target": "airflow.providers.apache.cassandra.hooks.cassandra.CassandraHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-cassandra",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.hooks.cloudant_hook.CloudantHook": {
+  "af2_target": "airflow.providers.cloudant.hooks.cloudant.CloudantHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-cloudant",
+  "version": "4.3.7"
+ },
+ "airflow.contrib.hooks.databricks_hook.CANCEL_RUN_ENDPOINT": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.CANCEL_RUN_ENDPOINT",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.databricks_hook.DatabricksHook": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.DatabricksHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.databricks_hook.GET_RUN_ENDPOINT": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.GET_RUN_ENDPOINT",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.databricks_hook.RESTART_CLUSTER_ENDPOINT": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.RESTART_CLUSTER_ENDPOINT",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.databricks_hook.RUN_LIFE_CYCLE_STATES": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.RUN_LIFE_CYCLE_STATES",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.databricks.hooks.databricks.RUN_LIFE_CYCLE_STATES, which no longer exists in apache-airflow-providers-databricks 7.23.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.databricks_hook.RUN_NOW_ENDPOINT": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.RUN_NOW_ENDPOINT",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.databricks_hook.RunState": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.RunState",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.databricks_hook.START_CLUSTER_ENDPOINT": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.START_CLUSTER_ENDPOINT",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.databricks_hook.SUBMIT_RUN_ENDPOINT": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.SUBMIT_RUN_ENDPOINT",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.databricks_hook.TERMINATE_CLUSTER_ENDPOINT": {
+  "af2_target": "airflow.providers.databricks.hooks.databricks.TERMINATE_CLUSTER_ENDPOINT",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.hooks.datadog_hook.DatadogHook": {
+  "af2_target": "airflow.providers.datadog.hooks.datadog.DatadogHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-datadog",
+  "version": "3.11.1"
+ },
+ "airflow.contrib.hooks.datastore_hook.DatastoreHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.datastore.DatastoreHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.dingding_hook.DingdingHook": {
+  "af2_target": "airflow.providers.dingding.hooks.dingding.DingdingHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-dingding",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.hooks.dingding_hook.requests": {
+  "af2_target": "airflow.providers.dingding.hooks.dingding.requests",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-dingding",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.hooks.discord_webhook_hook.DiscordWebhookHook": {
+  "af2_target": "airflow.providers.discord.hooks.discord_webhook.DiscordWebhookHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-discord",
+  "version": "3.12.5"
+ },
+ "airflow.contrib.hooks.emr_hook.EmrHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.emr.EmrHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.fs_hook.FSHook": {
+  "af2_target": "airflow.hooks.filesystem.FSHook",
+  "kind": "core"
+ },
+ "airflow.contrib.hooks.ftp_hook.FTPHook": {
+  "af2_target": "airflow.providers.ftp.hooks.ftp.FTPHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-ftp",
+  "version": "3.16.1"
+ },
+ "airflow.contrib.hooks.ftp_hook.FTPSHook": {
+  "af2_target": "airflow.providers.ftp.hooks.ftp.FTPSHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-ftp",
+  "version": "3.16.1"
+ },
+ "airflow.contrib.hooks.gcp_api_base_hook.GoogleBaseHook": {
+  "af2_target": "airflow.providers.google.common.hooks.base_google.GoogleBaseHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_api_base_hook.GoogleCloudBaseHook": {
+  "af2_target": "airflow.providers.google.common.hooks.base_google.GoogleBaseHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_bigtable_hook.BigtableHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.bigtable.BigtableHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_cloud_build_hook.CloudBuildHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.cloud_build.CloudBuildHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_compute_hook.ComputeEngineHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.compute.ComputeEngineHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_compute_hook.GceHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.compute.ComputeEngineHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_container_hook.GKEClusterHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.kubernetes_engine.GKEHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_container_hook.GKEHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.kubernetes_engine.GKEHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_dataflow_hook.DataFlowHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.dataflow.DataflowHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_dataflow_hook.DataflowHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.dataflow.DataflowHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_dataproc_hook.DataProcHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.dataproc.DataprocHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_dataproc_hook.DataprocHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.dataproc.DataprocHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_dlp_hook.CloudDLPHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.dlp.CloudDLPHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_dlp_hook.DlpJob": {
+  "af2_target": "airflow.providers.google.cloud.hooks.dlp.DlpJob",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_function_hook.CloudFunctionsHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.functions.CloudFunctionsHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_function_hook.GcfHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.functions.CloudFunctionsHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_kms_hook.CloudKMSHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.kms.CloudKMSHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_kms_hook.GoogleCloudKMSHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.kms.CloudKMSHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_mlengine_hook.MLEngineHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.mlengine.MLEngineHook",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.hooks.mlengine.MLEngineHook, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_natural_language_hook.CloudNaturalLanguageHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.natural_language.CloudNaturalLanguageHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_pubsub_hook.PubSubException": {
+  "af2_target": "airflow.providers.google.cloud.hooks.pubsub.PubSubException",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_pubsub_hook.PubSubHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.pubsub.PubSubHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_spanner_hook.CloudSpannerHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.spanner.SpannerHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_spanner_hook.SpannerHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.spanner.SpannerHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_speech_to_text_hook.CloudSpeechToTextHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.speech_to_text.CloudSpeechToTextHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_speech_to_text_hook.GCPSpeechToTextHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.speech_to_text.CloudSpeechToTextHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_sql_hook.CloudSQLDatabaseHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.cloud_sql.CloudSQLDatabaseHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_sql_hook.CloudSQLHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.cloud_sql.CloudSQLHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_sql_hook.CloudSqlDatabaseHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.cloud_sql.CloudSQLDatabaseHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_sql_hook.CloudSqlHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.cloud_sql.CloudSQLHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_tasks_hook.CloudTasksHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.tasks.CloudTasksHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_text_to_speech_hook.CloudTextToSpeechHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.text_to_speech.CloudTextToSpeechHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_text_to_speech_hook.GCPTextToSpeechHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.text_to_speech.CloudTextToSpeechHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_transfer_hook.CloudDataTransferServiceHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.cloud_storage_transfer_service.CloudDataTransferServiceHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_transfer_hook.GCPTransferServiceHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.cloud_storage_transfer_service.CloudDataTransferServiceHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_translate_hook.CloudTranslateHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.translate.CloudTranslateHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_video_intelligence_hook.CloudVideoIntelligenceHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.video_intelligence.CloudVideoIntelligenceHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcp_vision_hook.CloudVisionHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.vision.CloudVisionHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcs_hook.GCSHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.gcs.GCSHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gcs_hook.GoogleCloudStorageHook": {
+  "af2_target": "airflow.providers.google.cloud.hooks.gcs.GCSHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.gdrive_hook.GoogleDriveHook": {
+  "af2_target": "airflow.providers.google.suite.hooks.drive.GoogleDriveHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.hooks.grpc_hook.GrpcHook": {
+  "af2_target": "airflow.providers.grpc.hooks.grpc.GrpcHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-grpc",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.hooks.imap_hook.ImapHook": {
+  "af2_target": "airflow.providers.imap.hooks.imap.ImapHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-imap",
+  "version": "3.13.1"
+ },
+ "airflow.contrib.hooks.imap_hook.Mail": {
+  "af2_target": "airflow.providers.imap.hooks.imap.Mail",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-imap",
+  "version": "3.13.1"
+ },
+ "airflow.contrib.hooks.imap_hook.MailPart": {
+  "af2_target": "airflow.providers.imap.hooks.imap.MailPart",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-imap",
+  "version": "3.13.1"
+ },
+ "airflow.contrib.hooks.jenkins_hook.JenkinsHook": {
+  "af2_target": "airflow.providers.jenkins.hooks.jenkins.JenkinsHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-jenkins",
+  "version": "4.2.7"
+ },
+ "airflow.contrib.hooks.jira_hook.JiraHook": {
+  "af2_target": "airflow.providers.atlassian.jira.hooks.jira.JiraHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-atlassian-jira",
+  "version": "3.4.1"
+ },
+ "airflow.contrib.hooks.mongo_hook.MongoHook": {
+  "af2_target": "airflow.providers.mongo.hooks.mongo.MongoHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-mongo",
+  "version": "5.5.1"
+ },
+ "airflow.contrib.hooks.openfaas_hook.OK_STATUS_CODE": {
+  "af2_target": "airflow.providers.openfaas.hooks.openfaas.OK_STATUS_CODE",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-openfaas",
+  "version": "3.9.6"
+ },
+ "airflow.contrib.hooks.openfaas_hook.OpenFaasHook": {
+  "af2_target": "airflow.providers.openfaas.hooks.openfaas.OpenFaasHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-openfaas",
+  "version": "3.9.6"
+ },
+ "airflow.contrib.hooks.openfaas_hook.requests": {
+  "af2_target": "airflow.providers.openfaas.hooks.openfaas.requests",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-openfaas",
+  "version": "3.9.6"
+ },
+ "airflow.contrib.hooks.opsgenie_alert_hook.OpsgenieAlertHook": {
+  "af2_target": "airflow.providers.opsgenie.hooks.opsgenie.OpsgenieAlertHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-opsgenie",
+  "version": "5.11.1"
+ },
+ "airflow.contrib.hooks.pagerduty_hook.PagerdutyHook": {
+  "af2_target": "airflow.providers.pagerduty.hooks.pagerduty.PagerdutyHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-pagerduty",
+  "version": "5.3.1"
+ },
+ "airflow.contrib.hooks.pinot_hook.PinotAdminHook": {
+  "af2_target": "airflow.providers.apache.pinot.hooks.pinot.PinotAdminHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-pinot",
+  "version": "4.10.4"
+ },
+ "airflow.contrib.hooks.pinot_hook.PinotDbApiHook": {
+  "af2_target": "airflow.providers.apache.pinot.hooks.pinot.PinotDbApiHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-pinot",
+  "version": "4.10.4"
+ },
+ "airflow.contrib.hooks.redis_hook.RedisHook": {
+  "af2_target": "airflow.providers.redis.hooks.redis.RedisHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-redis",
+  "version": "4.7.1"
+ },
+ "airflow.contrib.hooks.redshift_hook.RedshiftHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.redshift_cluster.RedshiftHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.sagemaker_hook.LogState": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.sagemaker.LogState",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.sagemaker_hook.Position": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.sagemaker.Position",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.sagemaker_hook.SageMakerHook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.sagemaker.SageMakerHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.sagemaker_hook.argmin": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.sagemaker.argmin",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.sagemaker_hook.secondary_training_status_changed": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.sagemaker.secondary_training_status_changed",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.sagemaker_hook.secondary_training_status_message": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.sagemaker.secondary_training_status_message",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.hooks.salesforce_hook.SalesforceHook": {
+  "af2_target": "airflow.providers.salesforce.hooks.salesforce.SalesforceHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-salesforce",
+  "version": "5.15.1"
+ },
+ "airflow.contrib.hooks.salesforce_hook.pd": {
+  "af2_target": "airflow.providers.salesforce.hooks.salesforce.pd",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.salesforce.hooks.salesforce.pd, which no longer exists in apache-airflow-providers-salesforce 5.15.1. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-salesforce",
+  "version": "5.15.1"
+ },
+ "airflow.contrib.hooks.segment_hook.SegmentHook": {
+  "af2_target": "airflow.providers.segment.hooks.segment.SegmentHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-segment",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.hooks.segment_hook.analytics": {
+  "af2_target": "airflow.providers.segment.hooks.segment.analytics",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-segment",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.hooks.sftp_hook.SFTPHook": {
+  "af2_target": "airflow.providers.sftp.hooks.sftp.SFTPHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-sftp",
+  "version": "7.0.0"
+ },
+ "airflow.contrib.hooks.slack_webhook_hook.SlackWebhookHook": {
+  "af2_target": "airflow.providers.slack.hooks.slack_webhook.SlackWebhookHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-slack",
+  "version": "9.11.1"
+ },
+ "airflow.contrib.hooks.snowflake_hook.SnowflakeHook": {
+  "af2_target": "airflow.providers.snowflake.hooks.snowflake.SnowflakeHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-snowflake",
+  "version": "6.20.0"
+ },
+ "airflow.contrib.hooks.spark_jdbc_hook.SparkJDBCHook": {
+  "af2_target": "airflow.providers.apache.spark.hooks.spark_jdbc.SparkJDBCHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-spark",
+  "version": "6.3.4"
+ },
+ "airflow.contrib.hooks.spark_sql_hook.SparkSqlHook": {
+  "af2_target": "airflow.providers.apache.spark.hooks.spark_sql.SparkSqlHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-spark",
+  "version": "6.3.4"
+ },
+ "airflow.contrib.hooks.spark_submit_hook.SparkSubmitHook": {
+  "af2_target": "airflow.providers.apache.spark.hooks.spark_submit.SparkSubmitHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-spark",
+  "version": "6.3.4"
+ },
+ "airflow.contrib.hooks.ssh_hook.SSHHook": {
+  "af2_target": "airflow.providers.ssh.hooks.ssh.SSHHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-ssh",
+  "version": "7.0.1"
+ },
+ "airflow.contrib.hooks.vertica_hook.VerticaHook": {
+  "af2_target": "airflow.providers.vertica.hooks.vertica.VerticaHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-vertica",
+  "version": "4.4.1"
+ },
+ "airflow.contrib.hooks.wasb_hook.WasbHook": {
+  "af2_target": "airflow.providers.microsoft.azure.hooks.wasb.WasbHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.hooks.winrm_hook.WinRMHook": {
+  "af2_target": "airflow.providers.microsoft.winrm.hooks.winrm.WinRMHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-winrm",
+  "version": "3.15.1"
+ },
+ "airflow.contrib.operators.adls_list_operator.ADLSListOperator": {
+  "af2_target": "airflow.providers.microsoft.azure.operators.adls.ADLSListOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.operators.adls_list_operator.AzureDataLakeStorageListOperator": {
+  "af2_target": "airflow.providers.microsoft.azure.operators.adls.ADLSListOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.operators.adls_to_gcs.ADLSToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.adls_to_gcs.ADLSToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.adls_to_gcs.AdlsToGoogleCloudStorageOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.adls_to_gcs.ADLSToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.aws_athena_operator.AWSAthenaOperator": {
+  "af2_target": "airflow.providers.amazon.aws.operators.athena.AthenaOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.aws_sqs_publish_operator.SQSPublishOperator": {
+  "af2_target": "airflow.providers.amazon.aws.operators.sqs.SqsPublishOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.aws_sqs_publish_operator.SqsPublishOperator": {
+  "af2_target": "airflow.providers.amazon.aws.operators.sqs.SqsPublishOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.awsbatch_operator.AWSBatchOperator": {
+  "af2_target": "airflow.providers.amazon.aws.operators.batch.BatchOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.awsbatch_operator.BatchOperator": {
+  "af2_target": "airflow.providers.amazon.aws.operators.batch.BatchOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.awsbatch_operator.BatchProtocol": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.batch_client.BatchProtocol",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.azure_container_instances_operator.AzureContainerInstancesOperator": {
+  "af2_target": "airflow.providers.microsoft.azure.operators.container_instances.AzureContainerInstancesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.operators.azure_cosmos_operator.AzureCosmosInsertDocumentOperator": {
+  "af2_target": "airflow.providers.microsoft.azure.operators.cosmos.AzureCosmosInsertDocumentOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.operators.bigquery_check_operator.BigQueryCheckOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_check_operator.BigQueryIntervalCheckOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryIntervalCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_check_operator.BigQueryValueCheckOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryValueCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_get_data.BigQueryGetDataOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryGetDataOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryCreateEmptyDatasetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryCreateEmptyDatasetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryCreateEmptyTableOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryCreateEmptyTableOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.bigquery.BigQueryCreateEmptyTableOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryCreateExternalTableOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryCreateExternalTableOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.bigquery.BigQueryCreateExternalTableOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryDeleteDatasetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryDeleteDatasetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryExecuteQueryOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryExecuteQueryOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.bigquery.BigQueryExecuteQueryOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryGetDatasetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryGetDatasetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryGetDatasetTablesOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryGetDatasetTablesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryExecuteQueryOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.bigquery.BigQueryExecuteQueryOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryPatchDatasetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryPatchDatasetOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.bigquery.BigQueryPatchDatasetOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryUpdateDatasetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryUpdateDatasetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_operator.BigQueryUpsertTableOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryUpsertTableOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_table_delete_operator.BigQueryDeleteTableOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryDeleteTableOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_table_delete_operator.BigQueryTableDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigquery.BigQueryDeleteTableOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_to_bigquery.BigQueryToBigQueryOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.bigquery_to_bigquery.BigQueryToBigQueryOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_to_gcs.BigQueryToCloudStorageOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.bigquery_to_gcs.BigQueryToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_to_gcs.BigQueryToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.bigquery_to_gcs.BigQueryToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.bigquery_to_mysql_operator.BigQueryToMySqlOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.bigquery_to_mysql.BigQueryToMySqlOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.cassandra_to_gcs.CassandraToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.cassandra_to_gcs.CassandraToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.cassandra_to_gcs.CassandraToGoogleCloudStorageOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.cassandra_to_gcs.CassandraToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.databricks_operator.DatabricksRunNowOperator": {
+  "af2_target": "airflow.providers.databricks.operators.databricks.DatabricksRunNowOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.operators.databricks_operator.DatabricksSubmitRunOperator": {
+  "af2_target": "airflow.providers.databricks.operators.databricks.DatabricksSubmitRunOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-databricks",
+  "version": "7.23.0"
+ },
+ "airflow.contrib.operators.dataflow_operator.DataFlowJavaOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataflow.DataflowCreateJavaJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataflow.DataflowCreateJavaJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataflow_operator.DataFlowPythonOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataflow.DataflowCreatePythonJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataflow.DataflowCreatePythonJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataflow_operator.DataflowCreateJavaJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataflow.DataflowCreateJavaJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataflow.DataflowCreateJavaJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataflow_operator.DataflowCreatePythonJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataflow.DataflowCreatePythonJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataflow.DataflowCreatePythonJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataflow_operator.DataflowTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataflow.DataflowTemplatedJobStartOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataflow_operator.DataflowTemplatedJobStartOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataflow.DataflowTemplatedJobStartOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.datapipeline_operator.CreateDataPipelineOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.datapipeline.CreateDataPipelineOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.datapipeline.CreateDataPipelineOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.datapipeline_operator.RunDataPipelineOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.datapipeline.RunDataPipelineOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.datapipeline.RunDataPipelineOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataProcHadoopOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitHadoopJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitHadoopJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataProcHiveOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitHiveJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitHiveJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataProcJobBaseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocJobBaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataProcPigOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitPigJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitPigJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataProcPySparkOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitPySparkJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitPySparkJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataProcSparkOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitSparkJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitSparkJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataProcSparkSqlOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitSparkSqlJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitSparkSqlJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocClusterCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocCreateClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocClusterDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocDeleteClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocClusterScaleOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocScaleClusterOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocScaleClusterOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocCreateClusterOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocCreateClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocDeleteClusterOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocDeleteClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocInstantiateInlineWorkflowTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocInstantiateInlineWorkflowTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocInstantiateWorkflowTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocInstantiateWorkflowTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocJobBaseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocJobBaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocScaleClusterOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocScaleClusterOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocScaleClusterOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocSubmitHadoopJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitHadoopJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitHadoopJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocSubmitHiveJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitHiveJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitHiveJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocSubmitPigJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitPigJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitPigJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocSubmitPySparkJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitPySparkJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitPySparkJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocSubmitSparkJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitSparkJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitSparkJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocSubmitSparkSqlJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocSubmitSparkSqlJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.dataproc.DataprocSubmitSparkSqlJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocWorkflowTemplateInstantiateInlineOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocInstantiateInlineWorkflowTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dataproc_operator.DataprocWorkflowTemplateInstantiateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dataproc.DataprocInstantiateWorkflowTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.datastore_export_operator.CloudDatastoreExportEntitiesOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.datastore.CloudDatastoreExportEntitiesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.datastore_export_operator.DatastoreExportOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.datastore.CloudDatastoreExportEntitiesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.datastore_import_operator.CloudDatastoreImportEntitiesOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.datastore.CloudDatastoreImportEntitiesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.datastore_import_operator.DatastoreImportOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.datastore.CloudDatastoreImportEntitiesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.dingding_operator.DingdingOperator": {
+  "af2_target": "airflow.providers.dingding.operators.dingding.DingdingOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-dingding",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.operators.discord_webhook_operator.DiscordWebhookOperator": {
+  "af2_target": "airflow.providers.discord.operators.discord_webhook.DiscordWebhookOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-discord",
+  "version": "3.12.5"
+ },
+ "airflow.contrib.operators.docker_swarm_operator.DockerSwarmOperator": {
+  "af2_target": "airflow.providers.docker.operators.docker_swarm.DockerSwarmOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-docker",
+  "version": "4.6.1"
+ },
+ "airflow.contrib.operators.druid_operator.DruidOperator": {
+  "af2_target": "airflow.providers.apache.druid.operators.druid.DruidOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-druid",
+  "version": "4.6.1"
+ },
+ "airflow.contrib.operators.dynamodb_to_s3.DynamoDBToS3Operator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.dynamodb_to_s3.DynamoDBToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.ecs_operator.EcsOperator": {
+  "af2_target": "airflow.providers.amazon.aws.operators.ecs.EcsRunTaskOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.ecs_operator.EcsProtocol": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.ecs.EcsProtocol",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.ecs_operator.EcsRunTaskOperator": {
+  "af2_target": "airflow.providers.amazon.aws.operators.ecs.EcsRunTaskOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.file_to_gcs.FileToGoogleCloudStorageOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.local_to_gcs.LocalFilesystemToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.file_to_gcs.LocalFilesystemToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.local_to_gcs.LocalFilesystemToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.file_to_wasb.FileToWasbOperator": {
+  "af2_target": "airflow.providers.microsoft.azure.transfers.local_to_wasb.LocalFilesystemToWasbOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.operators.file_to_wasb.LocalFilesystemToWasbOperator": {
+  "af2_target": "airflow.providers.microsoft.azure.transfers.local_to_wasb.LocalFilesystemToWasbOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableClusterUpdateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableUpdateClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableCreateInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableCreateInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableCreateTableOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableCreateTableOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableDeleteInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableDeleteInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableDeleteTableOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableDeleteTableOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableInstanceCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableCreateInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableInstanceDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableDeleteInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableTableCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableCreateTableOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableTableDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableDeleteTableOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableTableReplicationCompletedSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.bigtable.BigtableTableReplicationCompletedSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableTableWaitForReplicationSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.bigtable.BigtableTableReplicationCompletedSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_bigtable_operator.BigtableUpdateClusterOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.bigtable.BigtableUpdateClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_cloud_build_operator.CloudBuildCreateBuildOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_build.CloudBuildCreateBuildOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.ComputeEngineBaseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineBaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.ComputeEngineCopyInstanceTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineCopyInstanceTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.ComputeEngineInstanceGroupUpdateManagerTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineInstanceGroupUpdateManagerTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.ComputeEngineSetMachineTypeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineSetMachineTypeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.ComputeEngineStartInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineStartInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.ComputeEngineStopInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineStopInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.GceBaseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineBaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.GceInstanceGroupManagerUpdateTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineInstanceGroupUpdateManagerTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.GceInstanceStartOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineStartInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.GceInstanceStopOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineStopInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.GceInstanceTemplateCopyOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineCopyInstanceTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_compute_operator.GceSetMachineTypeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.compute.ComputeEngineSetMachineTypeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_container_operator.GKEClusterCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.kubernetes_engine.GKECreateClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_container_operator.GKEClusterDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.kubernetes_engine.GKEDeleteClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_container_operator.GKECreateClusterOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.kubernetes_engine.GKECreateClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_container_operator.GKEDeleteClusterOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.kubernetes_engine.GKEDeleteClusterOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_container_operator.GKEPodOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.kubernetes_engine.GKEStartPodOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_container_operator.GKEStartPodOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.kubernetes_engine.GKEStartPodOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPCancelDLPJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPCancelDLPJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPCreateDLPJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPCreateDLPJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPCreateDeidentifyTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPCreateDeidentifyTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPCreateInspectTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPCreateInspectTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPCreateJobTriggerOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPCreateJobTriggerOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPCreateStoredInfoTypeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPCreateStoredInfoTypeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPDeidentifyContentOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPDeidentifyContentOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPDeleteDLPJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPDeleteDLPJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPDeleteDeidentifyTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPDeleteDeidentifyTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPDeleteDlpJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPDeleteDLPJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPDeleteInspectTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPDeleteInspectTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPDeleteJobTriggerOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPDeleteJobTriggerOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPDeleteStoredInfoTypeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPDeleteStoredInfoTypeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPGetDLPJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPGetDLPJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPGetDLPJobTriggerOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPGetDLPJobTriggerOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPGetDeidentifyTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPGetDeidentifyTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPGetDlpJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPGetDLPJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPGetInspectTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPGetInspectTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPGetJobTripperOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPGetDLPJobTriggerOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPGetStoredInfoTypeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPGetStoredInfoTypeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPInspectContentOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPInspectContentOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPListDLPJobsOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPListDLPJobsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPListDeidentifyTemplatesOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPListDeidentifyTemplatesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPListDlpJobsOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPListDLPJobsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPListInfoTypesOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPListInfoTypesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPListInspectTemplatesOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPListInspectTemplatesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPListJobTriggersOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPListJobTriggersOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPListStoredInfoTypesOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPListStoredInfoTypesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPRedactImageOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPRedactImageOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPReidentifyContentOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPReidentifyContentOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPUpdateDeidentifyTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPUpdateDeidentifyTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPUpdateInspectTemplateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPUpdateInspectTemplateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPUpdateJobTriggerOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPUpdateJobTriggerOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_dlp_operator.CloudDLPUpdateStoredInfoTypeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.dlp.CloudDLPUpdateStoredInfoTypeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_function_operator.CloudFunctionDeleteFunctionOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.functions.CloudFunctionDeleteFunctionOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_function_operator.CloudFunctionDeployFunctionOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.functions.CloudFunctionDeployFunctionOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_function_operator.GcfFunctionDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.functions.CloudFunctionDeleteFunctionOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_function_operator.GcfFunctionDeployOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.functions.CloudFunctionDeployFunctionOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_natural_language_operator.CloudLanguageAnalyzeEntitiesOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.natural_language.CloudNaturalLanguageAnalyzeEntitiesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_natural_language_operator.CloudLanguageAnalyzeEntitySentimentOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.natural_language.CloudNaturalLanguageAnalyzeEntitySentimentOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_natural_language_operator.CloudLanguageAnalyzeSentimentOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.natural_language.CloudNaturalLanguageAnalyzeSentimentOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_natural_language_operator.CloudLanguageClassifyTextOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.natural_language.CloudNaturalLanguageClassifyTextOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_natural_language_operator.CloudNaturalLanguageAnalyzeEntitiesOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.natural_language.CloudNaturalLanguageAnalyzeEntitiesOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_natural_language_operator.CloudNaturalLanguageAnalyzeEntitySentimentOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.natural_language.CloudNaturalLanguageAnalyzeEntitySentimentOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_natural_language_operator.CloudNaturalLanguageAnalyzeSentimentOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.natural_language.CloudNaturalLanguageAnalyzeSentimentOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_natural_language_operator.CloudNaturalLanguageClassifyTextOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.natural_language.CloudNaturalLanguageClassifyTextOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.CloudSpannerInstanceDatabaseDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerDeleteDatabaseInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.CloudSpannerInstanceDatabaseDeployOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerDeployDatabaseInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.CloudSpannerInstanceDatabaseQueryOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerQueryDatabaseInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.CloudSpannerInstanceDatabaseUpdateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerUpdateDatabaseInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.CloudSpannerInstanceDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerDeleteInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.CloudSpannerInstanceDeployOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerDeployInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.SpannerDeleteDatabaseInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerDeleteDatabaseInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.SpannerDeleteInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerDeleteInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.SpannerDeployDatabaseInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerDeployDatabaseInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.SpannerDeployInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerDeployInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.SpannerQueryDatabaseInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerQueryDatabaseInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_spanner_operator.SpannerUpdateDatabaseInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.spanner.SpannerUpdateDatabaseInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_speech_to_text_operator.CloudSpeechToTextRecognizeSpeechOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.speech_to_text.CloudSpeechToTextRecognizeSpeechOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_speech_to_text_operator.GcpSpeechToTextRecognizeSpeechOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.speech_to_text.CloudSpeechToTextRecognizeSpeechOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLBaseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLBaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLCreateInstanceDatabaseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLCreateInstanceDatabaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLCreateInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLCreateInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLDeleteInstanceDatabaseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLDeleteInstanceDatabaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLDeleteInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLDeleteInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLExecuteQueryOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLExecuteQueryOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLExportInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLExportInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLImportInstanceOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLImportInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLInstancePatchOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLInstancePatchOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSQLPatchInstanceDatabaseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLPatchInstanceDatabaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlBaseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLBaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlInstanceCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLCreateInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlInstanceDatabaseCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLCreateInstanceDatabaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlInstanceDatabaseDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLDeleteInstanceDatabaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlInstanceDatabasePatchOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLPatchInstanceDatabaseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlInstanceDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLDeleteInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlInstanceExportOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLExportInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlInstanceImportOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLImportInstanceOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlInstancePatchOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLInstancePatchOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_sql_operator.CloudSqlQueryOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_sql.CloudSQLExecuteQueryOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksQueueCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksQueueCreateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksQueueDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksQueueDeleteOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksQueueGetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksQueueGetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksQueuePauseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksQueuePauseOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksQueuePurgeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksQueuePurgeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksQueueResumeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksQueueResumeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksQueueUpdateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksQueueUpdateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksQueuesListOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksQueuesListOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksTaskCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksTaskCreateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksTaskDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksTaskDeleteOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksTaskGetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksTaskGetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksTaskRunOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksTaskRunOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_tasks_operator.CloudTasksTasksListOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.tasks.CloudTasksTasksListOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_text_to_speech_operator.CloudTextToSpeechSynthesizeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.text_to_speech.CloudTextToSpeechSynthesizeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_text_to_speech_operator.GcpTextToSpeechSynthesizeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.text_to_speech.CloudTextToSpeechSynthesizeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServiceCancelOperationOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceCancelOperationOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServiceCreateJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceCreateJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServiceDeleteJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceDeleteJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServiceGCSToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceGCSToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServiceGetOperationOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceGetOperationOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServiceListOperationsOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceListOperationsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServicePauseOperationOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServicePauseOperationOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServiceResumeOperationOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceResumeOperationOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServiceS3ToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceS3ToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.CloudDataTransferServiceUpdateJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceUpdateJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.GcpTransferServiceJobCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceCreateJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.GcpTransferServiceJobDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceDeleteJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.GcpTransferServiceJobUpdateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceUpdateJobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.GcpTransferServiceOperationCancelOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceCancelOperationOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.GcpTransferServiceOperationGetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceGetOperationOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.GcpTransferServiceOperationPauseOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServicePauseOperationOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.GcpTransferServiceOperationResumeOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceResumeOperationOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.GcpTransferServiceOperationsListOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceListOperationsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.GoogleCloudStorageToGoogleCloudStorageTransferOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceGCSToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_transfer_operator.S3ToGoogleCloudStorageTransferOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceS3ToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_translate_operator.CloudTranslateTextOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.translate.CloudTranslateTextOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_translate_speech_operator.CloudTranslateSpeechOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.translate_speech.CloudTranslateSpeechOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_translate_speech_operator.GcpTranslateSpeechOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.translate_speech.CloudTranslateSpeechOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_video_intelligence_operator.CloudVideoIntelligenceDetectVideoExplicitContentOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.video_intelligence.CloudVideoIntelligenceDetectVideoExplicitContentOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_video_intelligence_operator.CloudVideoIntelligenceDetectVideoLabelsOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.video_intelligence.CloudVideoIntelligenceDetectVideoLabelsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_video_intelligence_operator.CloudVideoIntelligenceDetectVideoShotsOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.video_intelligence.CloudVideoIntelligenceDetectVideoShotsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionAddProductToProductSetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionAddProductToProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionAnnotateImageOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionImageAnnotateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionCreateProductOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionCreateProductOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionCreateProductSetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionCreateProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionCreateReferenceImageOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionCreateReferenceImageOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionDeleteProductOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionDeleteProductOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionDeleteProductSetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionDeleteProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionDetectDocumentTextOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionTextDetectOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionDetectImageLabelsOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionDetectImageLabelsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionDetectImageSafeSearchOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionDetectImageSafeSearchOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionDetectTextOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionDetectTextOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionGetProductOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionGetProductOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionGetProductSetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionGetProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionImageAnnotateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionImageAnnotateOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionProductCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionCreateProductOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionProductDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionDeleteProductOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionProductGetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionGetProductOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionProductSetCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionCreateProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionProductSetDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionDeleteProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionProductSetGetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionGetProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionProductSetUpdateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionUpdateProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionProductUpdateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionUpdateProductOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionReferenceImageCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionCreateReferenceImageOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionRemoveProductFromProductSetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionRemoveProductFromProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionTextDetectOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionTextDetectOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionUpdateProductOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionUpdateProductOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcp_vision_operator.CloudVisionUpdateProductSetOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.vision.CloudVisionUpdateProductSetOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_acl_operator.GCSBucketCreateAclEntryOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSBucketCreateAclEntryOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_acl_operator.GCSObjectCreateAclEntryOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSObjectCreateAclEntryOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_acl_operator.GoogleCloudStorageBucketCreateAclEntryOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSBucketCreateAclEntryOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_acl_operator.GoogleCloudStorageObjectCreateAclEntryOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSObjectCreateAclEntryOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_delete_operator.GCSDeleteObjectsOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSDeleteObjectsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_delete_operator.GoogleCloudStorageDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSDeleteObjectsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_download_operator.GCSToLocalFilesystemOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.gcs_to_local.GCSToLocalFilesystemOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_download_operator.GoogleCloudStorageDownloadOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.gcs_to_local.GCSToLocalFilesystemOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_list_operator.GCSListObjectsOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSListObjectsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_list_operator.GoogleCloudStorageListOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSListObjectsOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_operator.GCSCreateBucketOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSCreateBucketOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_operator.GoogleCloudStorageCreateBucketOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.gcs.GCSCreateBucketOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_to_bq.GCSToBigQueryOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.gcs_to_bigquery.GCSToBigQueryOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_to_bq.GoogleCloudStorageToBigQueryOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.gcs_to_bigquery.GCSToBigQueryOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_to_gcs.GCSToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.gcs_to_gcs.GCSToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_to_gcs.GoogleCloudStorageToGoogleCloudStorageOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.gcs_to_gcs.GCSToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_to_gdrive_operator.GCSToGoogleDriveOperator": {
+  "af2_target": "airflow.providers.google.suite.transfers.gcs_to_gdrive.GCSToGoogleDriveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.gcs_to_s3.GCSToS3Operator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.gcs_to_s3.GCSToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.gcs_to_s3.GoogleCloudStorageToS3Operator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.gcs_to_s3.GCSToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.grpc_operator.GrpcOperator": {
+  "af2_target": "airflow.providers.grpc.operators.grpc.GrpcOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-grpc",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.operators.hive_to_dynamodb.HiveToDynamoDBOperator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.hive_to_dynamodb.HiveToDynamoDBOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.imap_attachment_to_s3_operator.ImapAttachmentToS3Operator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.imap_attachment_to_s3.ImapAttachmentToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.jenkins_job_trigger_operator.JenkinsJobTriggerOperator": {
+  "af2_target": "airflow.providers.jenkins.operators.jenkins_job_trigger.JenkinsJobTriggerOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-jenkins",
+  "version": "4.2.7"
+ },
+ "airflow.contrib.operators.jira_operator.JiraOperator": {
+  "af2_target": "airflow.providers.atlassian.jira.operators.jira.JiraOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-atlassian-jira",
+  "version": "3.4.1"
+ },
+ "airflow.contrib.operators.kubernetes_pod_operator.KubernetesPodOperator": {
+  "af2_target": "airflow.providers.cncf.kubernetes.operators.pod.KubernetesPodOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-cncf-kubernetes",
+  "version": "10.25.0"
+ },
+ "airflow.contrib.operators.mlengine_operator.MLEngineBatchPredictionOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.mlengine.MLEngineStartBatchPredictionJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.mlengine.MLEngineStartBatchPredictionJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mlengine_operator.MLEngineManageModelOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.mlengine.MLEngineManageModelOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.mlengine.MLEngineManageModelOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mlengine_operator.MLEngineManageVersionOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.mlengine.MLEngineManageVersionOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.mlengine.MLEngineManageVersionOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mlengine_operator.MLEngineModelOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.mlengine.MLEngineManageModelOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.mlengine.MLEngineManageModelOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mlengine_operator.MLEngineStartBatchPredictionJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.mlengine.MLEngineStartBatchPredictionJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.mlengine.MLEngineStartBatchPredictionJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mlengine_operator.MLEngineStartTrainingJobOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.mlengine.MLEngineStartTrainingJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.mlengine.MLEngineStartTrainingJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mlengine_operator.MLEngineTrainingOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.mlengine.MLEngineStartTrainingJobOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.mlengine.MLEngineStartTrainingJobOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mlengine_operator.MLEngineVersionOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.mlengine.MLEngineManageVersionOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.operators.mlengine.MLEngineManageVersionOperator, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mongo_to_s3.MongoToS3Operator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.mongo_to_s3.MongoToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.mssql_to_gcs.MSSQLToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.mssql_to_gcs.MSSQLToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mssql_to_gcs.MsSqlToGoogleCloudStorageOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.mssql_to_gcs.MSSQLToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mysql_to_gcs.MySQLToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.mysql_to_gcs.MySQLToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.mysql_to_gcs.MySqlToGoogleCloudStorageOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.mysql_to_gcs.MySQLToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.opsgenie_alert_operator.OpsgenieAlertOperator": {
+  "af2_target": "airflow.providers.opsgenie.operators.opsgenie.OpsgenieCreateAlertOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-opsgenie",
+  "version": "5.11.1"
+ },
+ "airflow.contrib.operators.opsgenie_alert_operator.OpsgenieCreateAlertOperator": {
+  "af2_target": "airflow.providers.opsgenie.operators.opsgenie.OpsgenieCreateAlertOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-opsgenie",
+  "version": "5.11.1"
+ },
+ "airflow.contrib.operators.oracle_to_azure_data_lake_transfer.OracleToAzureDataLakeOperator": {
+  "af2_target": "airflow.providers.microsoft.azure.transfers.oracle_to_azure_data_lake.OracleToAzureDataLakeOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.operators.oracle_to_oracle_transfer.OracleToOracleOperator": {
+  "af2_target": "airflow.providers.oracle.transfers.oracle_to_oracle.OracleToOracleOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-oracle",
+  "version": "4.7.1"
+ },
+ "airflow.contrib.operators.oracle_to_oracle_transfer.OracleToOracleTransfer": {
+  "af2_target": "airflow.providers.oracle.transfers.oracle_to_oracle.OracleToOracleOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-oracle",
+  "version": "4.7.1"
+ },
+ "airflow.contrib.operators.postgres_to_gcs_operator.PostgresToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.postgres_to_gcs.PostgresToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.postgres_to_gcs_operator.PostgresToGoogleCloudStorageOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.postgres_to_gcs.PostgresToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubCreateSubscriptionOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubCreateSubscriptionOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubCreateTopicOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubCreateTopicOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubDeleteSubscriptionOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubDeleteSubscriptionOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubDeleteTopicOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubDeleteTopicOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubPublishMessageOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubPublishMessageOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubPublishOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubPublishMessageOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubSubscriptionCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubCreateSubscriptionOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubSubscriptionDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubDeleteSubscriptionOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubTopicCreateOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubCreateTopicOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.pubsub_operator.PubSubTopicDeleteOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.pubsub.PubSubDeleteTopicOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.redis_publish_operator.RedisPublishOperator": {
+  "af2_target": "airflow.providers.redis.operators.redis_publish.RedisPublishOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-redis",
+  "version": "4.7.1"
+ },
+ "airflow.contrib.operators.s3_to_gcs_operator.S3ToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.s3_to_gcs.S3ToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.s3_to_gcs_transfer_operator.CloudDataTransferServiceS3ToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.operators.cloud_storage_transfer_service.CloudDataTransferServiceS3ToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.s3_to_sftp_operator.S3ToSFTPOperator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.s3_to_sftp.S3ToSFTPOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.segment_track_event_operator.SegmentTrackEventOperator": {
+  "af2_target": "airflow.providers.segment.operators.segment_track_event.SegmentTrackEventOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-segment",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.operators.sftp_operator.SFTPOperator": {
+  "af2_target": "airflow.providers.sftp.operators.sftp.SFTPOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-sftp",
+  "version": "7.0.0"
+ },
+ "airflow.contrib.operators.sftp_to_s3_operator.SFTPToS3Operator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.sftp_to_s3.SFTPToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.slack_webhook_operator.SlackWebhookOperator": {
+  "af2_target": "airflow.providers.slack.operators.slack_webhook.SlackWebhookOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-slack",
+  "version": "9.11.1"
+ },
+ "airflow.contrib.operators.snowflake_operator.SnowflakeOperator": {
+  "af2_target": "airflow.providers.snowflake.operators.snowflake.SnowflakeOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.snowflake.operators.snowflake.SnowflakeOperator, which no longer exists in apache-airflow-providers-snowflake 6.20.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-snowflake",
+  "version": "6.20.0"
+ },
+ "airflow.contrib.operators.sns_publish_operator.SnsPublishOperator": {
+  "af2_target": "airflow.providers.amazon.aws.operators.sns.SnsPublishOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.operators.spark_jdbc_operator.SparkJDBCOperator": {
+  "af2_target": "airflow.providers.apache.spark.operators.spark_jdbc.SparkJDBCOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-spark",
+  "version": "6.3.4"
+ },
+ "airflow.contrib.operators.spark_jdbc_operator.SparkSubmitOperator": {
+  "af2_target": "airflow.providers.apache.spark.operators.spark_jdbc.SparkSubmitOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-spark",
+  "version": "6.3.4"
+ },
+ "airflow.contrib.operators.spark_sql_operator.SparkSqlOperator": {
+  "af2_target": "airflow.providers.apache.spark.operators.spark_sql.SparkSqlOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-spark",
+  "version": "6.3.4"
+ },
+ "airflow.contrib.operators.spark_submit_operator.SparkSubmitOperator": {
+  "af2_target": "airflow.providers.apache.spark.operators.spark_submit.SparkSubmitOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-spark",
+  "version": "6.3.4"
+ },
+ "airflow.contrib.operators.sql_to_gcs.BaseSQLToGCSOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.sql_to_gcs.BaseSQLToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.sql_to_gcs.BaseSQLToGoogleCloudStorageOperator": {
+  "af2_target": "airflow.providers.google.cloud.transfers.sql_to_gcs.BaseSQLToGCSOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.operators.ssh_operator.SSHOperator": {
+  "af2_target": "airflow.providers.ssh.operators.ssh.SSHOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-ssh",
+  "version": "7.0.1"
+ },
+ "airflow.contrib.operators.vertica_operator.VerticaOperator": {
+  "af2_target": "airflow.providers.vertica.operators.vertica.VerticaOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.vertica.operators.vertica.VerticaOperator, which no longer exists in apache-airflow-providers-vertica 4.4.1. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-vertica",
+  "version": "4.4.1"
+ },
+ "airflow.contrib.operators.vertica_to_hive.VerticaToHiveOperator": {
+  "af2_target": "airflow.providers.apache.hive.transfers.vertica_to_hive.VerticaToHiveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.contrib.operators.vertica_to_hive.VerticaToHiveTransfer": {
+  "af2_target": "airflow.providers.apache.hive.transfers.vertica_to_hive.VerticaToHiveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.contrib.operators.vertica_to_mysql.VerticaToMySqlOperator": {
+  "af2_target": "airflow.providers.mysql.transfers.vertica_to_mysql.VerticaToMySqlOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-mysql",
+  "version": "6.7.1"
+ },
+ "airflow.contrib.operators.vertica_to_mysql.VerticaToMySqlTransfer": {
+  "af2_target": "airflow.providers.mysql.transfers.vertica_to_mysql.VerticaToMySqlOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-mysql",
+  "version": "6.7.1"
+ },
+ "airflow.contrib.operators.wasb_delete_blob_operator.WasbDeleteBlobOperator": {
+  "af2_target": "airflow.providers.microsoft.azure.operators.wasb_delete_blob.WasbDeleteBlobOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.operators.winrm_operator.WinRMOperator": {
+  "af2_target": "airflow.providers.microsoft.winrm.operators.winrm.WinRMOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-winrm",
+  "version": "3.15.1"
+ },
+ "airflow.contrib.secrets.aws_secrets_manager.SecretsManagerBackend": {
+  "af2_target": "airflow.providers.amazon.aws.secrets.secrets_manager.SecretsManagerBackend",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.secrets.aws_systems_manager.SystemsManagerParameterStoreBackend": {
+  "af2_target": "airflow.providers.amazon.aws.secrets.systems_manager.SystemsManagerParameterStoreBackend",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.secrets.azure_key_vault.AzureKeyVaultBackend": {
+  "af2_target": "airflow.providers.microsoft.azure.secrets.key_vault.AzureKeyVaultBackend",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.secrets.gcp_secrets_manager.CloudSecretManagerBackend": {
+  "af2_target": "airflow.providers.google.cloud.secrets.secret_manager.CloudSecretManagerBackend",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.secrets.gcp_secrets_manager.CloudSecretsManagerBackend": {
+  "af2_target": "airflow.providers.google.cloud.secrets.secret_manager.CloudSecretManagerBackend",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.secrets.hashicorp_vault.VaultBackend": {
+  "af2_target": "airflow.providers.hashicorp.secrets.vault.VaultBackend",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-hashicorp",
+  "version": "4.8.4"
+ },
+ "airflow.contrib.sensors.aws_athena_sensor.AthenaSensor": {
+  "af2_target": "airflow.providers.amazon.aws.sensors.athena.AthenaSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.sensors.aws_glue_catalog_partition_sensor.AwsGlueCatalogPartitionSensor": {
+  "af2_target": "airflow.providers.amazon.aws.sensors.glue_catalog_partition.GlueCatalogPartitionSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.sensors.aws_redshift_cluster_sensor.AwsRedshiftClusterSensor": {
+  "af2_target": "airflow.providers.amazon.aws.sensors.redshift_cluster.RedshiftClusterSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.sensors.aws_sqs_sensor.SQSSensor": {
+  "af2_target": "airflow.providers.amazon.aws.sensors.sqs.SqsSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.sensors.aws_sqs_sensor.SqsSensor": {
+  "af2_target": "airflow.providers.amazon.aws.sensors.sqs.SqsSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.sensors.azure_cosmos_sensor.AzureCosmosDocumentSensor": {
+  "af2_target": "airflow.providers.microsoft.azure.sensors.cosmos.AzureCosmosDocumentSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.sensors.bash_sensor.BashSensor": {
+  "af2_target": "airflow.sensors.bash.BashSensor",
+  "kind": "core"
+ },
+ "airflow.contrib.sensors.bash_sensor.Popen": {
+  "af2_target": "airflow.sensors.bash.Popen",
+  "kind": "core"
+ },
+ "airflow.contrib.sensors.bash_sensor.STDOUT": {
+  "af2_target": "airflow.sensors.bash.STDOUT",
+  "kind": "core"
+ },
+ "airflow.contrib.sensors.bash_sensor.TemporaryDirectory": {
+  "af2_target": "airflow.sensors.bash.TemporaryDirectory",
+  "kind": "core"
+ },
+ "airflow.contrib.sensors.bash_sensor.gettempdir": {
+  "af2_target": "airflow.sensors.bash.gettempdir",
+  "kind": "core"
+ },
+ "airflow.contrib.sensors.bigquery_sensor.BigQueryTableExistenceSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.bigquery.BigQueryTableExistenceSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.bigquery_sensor.BigQueryTableSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.bigquery.BigQueryTableExistenceSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.cassandra_record_sensor.CassandraRecordSensor": {
+  "af2_target": "airflow.providers.apache.cassandra.sensors.record.CassandraRecordSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-cassandra",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.sensors.cassandra_table_sensor.CassandraTableSensor": {
+  "af2_target": "airflow.providers.apache.cassandra.sensors.table.CassandraTableSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-cassandra",
+  "version": "3.10.1"
+ },
+ "airflow.contrib.sensors.celery_queue_sensor.CeleryQueueSensor": {
+  "af2_target": "airflow.providers.celery.sensors.celery_queue.CeleryQueueSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-celery",
+  "version": "3.26.0"
+ },
+ "airflow.contrib.sensors.datadog_sensor.DatadogSensor": {
+  "af2_target": "airflow.providers.datadog.sensors.datadog.DatadogSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-datadog",
+  "version": "3.11.1"
+ },
+ "airflow.contrib.sensors.file_sensor.FileSensor": {
+  "af2_target": "airflow.sensors.filesystem.FileSensor",
+  "kind": "core"
+ },
+ "airflow.contrib.sensors.ftp_sensor.FTPSSensor": {
+  "af2_target": "airflow.providers.ftp.sensors.ftp.FTPSSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-ftp",
+  "version": "3.16.1"
+ },
+ "airflow.contrib.sensors.ftp_sensor.FTPSensor": {
+  "af2_target": "airflow.providers.ftp.sensors.ftp.FTPSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-ftp",
+  "version": "3.16.1"
+ },
+ "airflow.contrib.sensors.gcp_transfer_sensor.CloudDataTransferServiceJobStatusSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.cloud_storage_transfer_service.CloudDataTransferServiceJobStatusSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.gcp_transfer_sensor.GCPTransferServiceWaitForJobStatusSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.cloud_storage_transfer_service.CloudDataTransferServiceJobStatusSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.gcs_sensor.GCSObjectExistenceSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.gcs.GCSObjectExistenceSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.gcs_sensor.GCSObjectUpdateSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.gcs.GCSObjectUpdateSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.gcs_sensor.GCSObjectsWithPrefixExistenceSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.gcs.GCSObjectsWithPrefixExistenceSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.gcs_sensor.GCSUploadSessionCompleteSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.gcs.GCSUploadSessionCompleteSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.gcs_sensor.GoogleCloudStorageObjectSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.gcs.GCSObjectExistenceSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.gcs_sensor.GoogleCloudStorageObjectUpdatedSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.gcs.GCSObjectUpdateSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.gcs_sensor.GoogleCloudStoragePrefixSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.gcs.GCSObjectsWithPrefixExistenceSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.gcs_sensor.GoogleCloudStorageUploadSessionCompleteSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.gcs.GCSUploadSessionCompleteSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.imap_attachment_sensor.ImapAttachmentSensor": {
+  "af2_target": "airflow.providers.imap.sensors.imap_attachment.ImapAttachmentSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-imap",
+  "version": "3.13.1"
+ },
+ "airflow.contrib.sensors.jira_sensor.JiraSensor": {
+  "af2_target": "airflow.providers.atlassian.jira.sensors.jira.JiraSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-atlassian-jira",
+  "version": "3.4.1"
+ },
+ "airflow.contrib.sensors.jira_sensor.JiraTicketSensor": {
+  "af2_target": "airflow.providers.atlassian.jira.sensors.jira.JiraTicketSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-atlassian-jira",
+  "version": "3.4.1"
+ },
+ "airflow.contrib.sensors.mongo_sensor.MongoSensor": {
+  "af2_target": "airflow.providers.mongo.sensors.mongo.MongoSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-mongo",
+  "version": "5.5.1"
+ },
+ "airflow.contrib.sensors.pubsub_sensor.PubSubPullSensor": {
+  "af2_target": "airflow.providers.google.cloud.sensors.pubsub.PubSubPullSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.sensors.python_sensor.PythonSensor": {
+  "af2_target": "airflow.sensors.python.PythonSensor",
+  "kind": "core"
+ },
+ "airflow.contrib.sensors.redis_key_sensor.RedisKeySensor": {
+  "af2_target": "airflow.providers.redis.sensors.redis_key.RedisKeySensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-redis",
+  "version": "4.7.1"
+ },
+ "airflow.contrib.sensors.redis_pub_sub_sensor.RedisPubSubSensor": {
+  "af2_target": "airflow.providers.redis.sensors.redis_pub_sub.RedisPubSubSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-redis",
+  "version": "4.7.1"
+ },
+ "airflow.contrib.sensors.sagemaker_training_sensor.SageMakerHook": {
+  "af2_target": "airflow.providers.amazon.aws.sensors.sagemaker.SageMakerHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.sensors.sagemaker_training_sensor.SageMakerTrainingSensor": {
+  "af2_target": "airflow.providers.amazon.aws.sensors.sagemaker.SageMakerTrainingSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.contrib.sensors.sftp_sensor.SFTPSensor": {
+  "af2_target": "airflow.providers.sftp.sensors.sftp.SFTPSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-sftp",
+  "version": "7.0.0"
+ },
+ "airflow.contrib.sensors.wasb_sensor.WasbBlobSensor": {
+  "af2_target": "airflow.providers.microsoft.azure.sensors.wasb.WasbBlobSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.sensors.wasb_sensor.WasbPrefixSensor": {
+  "af2_target": "airflow.providers.microsoft.azure.sensors.wasb.WasbPrefixSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ },
+ "airflow.contrib.sensors.weekday_sensor.DayOfWeekSensor": {
+  "af2_target": "airflow.sensors.weekday.DayOfWeekSensor",
+  "kind": "core"
+ },
+ "airflow.contrib.task_runner.cgroup_task_runner.CgroupTaskRunner": {
+  "af2_target": "airflow.task.task_runner.cgroup_task_runner.CgroupTaskRunner",
+  "kind": "core"
+ },
+ "airflow.contrib.utils.gcp_field_sanitizer.GcpBodyFieldSanitizer": {
+  "af2_target": "airflow.providers.google.cloud.utils.field_sanitizer.GcpBodyFieldSanitizer",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.utils.gcp_field_sanitizer.GcpFieldSanitizerException": {
+  "af2_target": "airflow.providers.google.cloud.utils.field_sanitizer.GcpFieldSanitizerException",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.utils.gcp_field_validator.GcpBodyFieldValidator": {
+  "af2_target": "airflow.providers.google.cloud.utils.field_validator.GcpBodyFieldValidator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.utils.gcp_field_validator.GcpFieldValidationException": {
+  "af2_target": "airflow.providers.google.cloud.utils.field_validator.GcpFieldValidationException",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.utils.gcp_field_validator.GcpValidationSpecificationException": {
+  "af2_target": "airflow.providers.google.cloud.utils.field_validator.GcpValidationSpecificationException",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.utils.log.task_handler_with_custom_formatter.TaskHandlerWithCustomFormatter": {
+  "af2_target": "airflow.utils.log.task_handler_with_custom_formatter.TaskHandlerWithCustomFormatter",
+  "kind": "core"
+ },
+ "airflow.contrib.utils.mlengine_operator_utils.create_evaluate_ops": {
+  "af2_target": "airflow.providers.google.cloud.utils.mlengine_operator_utils.create_evaluate_ops",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.google.cloud.utils.mlengine_operator_utils.create_evaluate_ops, which no longer exists in apache-airflow-providers-google 22.8.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.utils.mlengine_prediction_summary.JsonCoder": {
+  "af2_target": "airflow.providers.google.cloud.utils.mlengine_prediction_summary.JsonCoder",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.utils.mlengine_prediction_summary.MakeSummary": {
+  "af2_target": "airflow.providers.google.cloud.utils.mlengine_prediction_summary.MakeSummary",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.contrib.utils.sendgrid.import_string": {
+  "af2_target": "airflow.utils.module_loading.import_string",
+  "kind": "core"
+ },
+ "airflow.contrib.utils.weekday.WeekDay": {
+  "af2_target": "airflow.utils.weekday.WeekDay",
+  "kind": "core"
+ },
+ "airflow.executors.celery_executor.CeleryExecutor": {
+  "af2_target": "airflow.providers.celery.executors.celery_executor.CeleryExecutor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-celery",
+  "version": "3.26.0"
+ },
+ "airflow.executors.celery_executor.app": {
+  "af2_target": "airflow.providers.celery.executors.celery_executor_utils.app",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-celery",
+  "version": "3.26.0"
+ },
+ "airflow.executors.celery_kubernetes_executor.CeleryKubernetesExecutor": {
+  "af2_target": "airflow.providers.celery.executors.celery_kubernetes_executor.CeleryKubernetesExecutor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-celery",
+  "version": "3.26.0"
+ },
+ "airflow.executors.dask_executor.DaskExecutor": {
+  "af2_target": "airflow.providers.daskexecutor.executors.dask_executor.DaskExecutor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-daskexecutor",
+  "version": "1.1.1"
+ },
+ "airflow.executors.kubernetes_executor.KubernetesExecutor": {
+  "af2_target": "airflow.providers.cncf.kubernetes.executors.kubernetes_executor.KubernetesExecutor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-cncf-kubernetes",
+  "version": "10.25.0"
+ },
+ "airflow.executors.kubernetes_executor_types.ALL_NAMESPACES": {
+  "af2_target": "airflow.providers.cncf.kubernetes.executors.kubernetes_executor_types.ALL_NAMESPACES",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-cncf-kubernetes",
+  "version": "10.25.0"
+ },
+ "airflow.executors.kubernetes_executor_types.POD_EXECUTOR_DONE_KEY": {
+  "af2_target": "airflow.providers.cncf.kubernetes.executors.kubernetes_executor_types.POD_EXECUTOR_DONE_KEY",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-cncf-kubernetes",
+  "version": "10.25.0"
+ },
+ "airflow.executors.kubernetes_executor_utils.AirflowKubernetesScheduler": {
+  "af2_target": "airflow.providers.cncf.kubernetes.executors.kubernetes_executor_utils.AirflowKubernetesScheduler",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-cncf-kubernetes",
+  "version": "10.25.0"
+ },
+ "airflow.executors.kubernetes_executor_utils.KubernetesJobWatcher": {
+  "af2_target": "airflow.providers.cncf.kubernetes.executors.kubernetes_executor_utils.KubernetesJobWatcher",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-cncf-kubernetes",
+  "version": "10.25.0"
+ },
+ "airflow.executors.kubernetes_executor_utils.ResourceVersion": {
+  "af2_target": "airflow.providers.cncf.kubernetes.executors.kubernetes_executor_utils.ResourceVersion",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-cncf-kubernetes",
+  "version": "10.25.0"
+ },
+ "airflow.executors.local_kubernetes_executor.LocalKubernetesExecutor": {
+  "af2_target": "airflow.providers.cncf.kubernetes.executors.LocalKubernetesExecutor",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.cncf.kubernetes.executors.LocalKubernetesExecutor, which no longer exists in apache-airflow-providers-cncf-kubernetes 10.25.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-cncf-kubernetes",
+  "version": "10.25.0"
+ },
+ "airflow.hooks.S3_hook.S3Hook": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.s3.S3Hook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.hooks.S3_hook.provide_bucket_name": {
+  "af2_target": "airflow.providers.amazon.aws.hooks.s3.provide_bucket_name",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.hooks.base_hook.BaseHook": {
+  "af2_target": "airflow.hooks.base.BaseHook",
+  "kind": "core"
+ },
+ "airflow.hooks.dbapi_hook.DbApiHook": {
+  "af2_target": "airflow.providers.common.sql.hooks.sql.DbApiHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.hooks.docker_hook.DockerHook": {
+  "af2_target": "airflow.providers.docker.hooks.docker.DockerHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-docker",
+  "version": "4.6.1"
+ },
+ "airflow.hooks.druid_hook.DruidDbApiHook": {
+  "af2_target": "airflow.providers.apache.druid.hooks.druid.DruidDbApiHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-druid",
+  "version": "4.6.1"
+ },
+ "airflow.hooks.druid_hook.DruidHook": {
+  "af2_target": "airflow.providers.apache.druid.hooks.druid.DruidHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-druid",
+  "version": "4.6.1"
+ },
+ "airflow.hooks.hive_hooks.HIVE_QUEUE_PRIORITIES": {
+  "af2_target": "airflow.providers.apache.hive.hooks.hive.HIVE_QUEUE_PRIORITIES",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.hooks.hive_hooks.HiveCliHook": {
+  "af2_target": "airflow.providers.apache.hive.hooks.hive.HiveCliHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.hooks.hive_hooks.HiveMetastoreHook": {
+  "af2_target": "airflow.providers.apache.hive.hooks.hive.HiveMetastoreHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.hooks.hive_hooks.HiveServer2Hook": {
+  "af2_target": "airflow.providers.apache.hive.hooks.hive.HiveServer2Hook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.hooks.http_hook.HttpHook": {
+  "af2_target": "airflow.providers.http.hooks.http.HttpHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-http",
+  "version": "6.3.0"
+ },
+ "airflow.hooks.jdbc_hook.JdbcHook": {
+  "af2_target": "airflow.providers.jdbc.hooks.jdbc.JdbcHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-jdbc",
+  "version": "5.6.1"
+ },
+ "airflow.hooks.jdbc_hook.jaydebeapi": {
+  "af2_target": "airflow.providers.jdbc.hooks.jdbc.jaydebeapi",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-jdbc",
+  "version": "5.6.1"
+ },
+ "airflow.hooks.mssql_hook.MsSqlHook": {
+  "af2_target": "airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-mssql",
+  "version": "4.7.2"
+ },
+ "airflow.hooks.mysql_hook.MySqlHook": {
+  "af2_target": "airflow.providers.mysql.hooks.mysql.MySqlHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-mysql",
+  "version": "6.7.1"
+ },
+ "airflow.hooks.oracle_hook.OracleHook": {
+  "af2_target": "airflow.providers.oracle.hooks.oracle.OracleHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-oracle",
+  "version": "4.7.1"
+ },
+ "airflow.hooks.pig_hook.PigCliHook": {
+  "af2_target": "airflow.providers.apache.pig.hooks.pig.PigCliHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-pig",
+  "version": "4.9.1"
+ },
+ "airflow.hooks.postgres_hook.PostgresHook": {
+  "af2_target": "airflow.providers.postgres.hooks.postgres.PostgresHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-postgres",
+  "version": "7.1.1"
+ },
+ "airflow.hooks.presto_hook.PrestoHook": {
+  "af2_target": "airflow.providers.presto.hooks.presto.PrestoHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-presto",
+  "version": "5.13.1"
+ },
+ "airflow.hooks.samba_hook.SambaHook": {
+  "af2_target": "airflow.providers.samba.hooks.samba.SambaHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-samba",
+  "version": "4.14.1"
+ },
+ "airflow.hooks.slack_hook.SlackHook": {
+  "af2_target": "airflow.providers.slack.hooks.slack.SlackHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-slack",
+  "version": "9.11.1"
+ },
+ "airflow.hooks.sqlite_hook.SqliteHook": {
+  "af2_target": "airflow.providers.sqlite.hooks.sqlite.SqliteHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-sqlite",
+  "version": "4.3.4"
+ },
+ "airflow.hooks.webhdfs_hook.WebHDFSHook": {
+  "af2_target": "airflow.providers.apache.hdfs.hooks.webhdfs.WebHDFSHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hdfs",
+  "version": "4.14.2"
+ },
+ "airflow.hooks.zendesk_hook.ZendeskHook": {
+  "af2_target": "airflow.providers.zendesk.hooks.zendesk.ZendeskHook",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-zendesk",
+  "version": "4.12.1"
+ },
+ "airflow.macros.hive.closest_ds_partition": {
+  "af2_target": "airflow.providers.apache.hive.macros.hive.closest_ds_partition",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.macros.hive.max_partition": {
+  "af2_target": "airflow.providers.apache.hive.macros.hive.max_partition",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.bash_operator.BashOperator": {
+  "af2_target": "airflow.operators.bash.BashOperator",
+  "kind": "core"
+ },
+ "airflow.operators.branch_operator.BaseBranchOperator": {
+  "af2_target": "airflow.operators.branch.BaseBranchOperator",
+  "kind": "core"
+ },
+ "airflow.operators.check_operator.CheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.check_operator.IntervalCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLIntervalCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.check_operator.SQLCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.check_operator.SQLIntervalCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLIntervalCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.check_operator.SQLThresholdCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLThresholdCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.check_operator.SQLValueCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLValueCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.check_operator.ThresholdCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLThresholdCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.check_operator.ValueCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLValueCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.dagrun_operator.TriggerDagRunLink": {
+  "af2_target": "airflow.operators.trigger_dagrun.TriggerDagRunLink",
+  "kind": "core"
+ },
+ "airflow.operators.dagrun_operator.TriggerDagRunOperator": {
+  "af2_target": "airflow.operators.trigger_dagrun.TriggerDagRunOperator",
+  "kind": "core"
+ },
+ "airflow.operators.docker_operator.DockerOperator": {
+  "af2_target": "airflow.providers.docker.operators.docker.DockerOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-docker",
+  "version": "4.6.1"
+ },
+ "airflow.operators.druid_check_operator.DruidCheckOperator": {
+  "af2_target": "airflow.providers.apache.druid.operators.druid_check.DruidCheckOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.apache.druid.operators.druid_check.DruidCheckOperator, which no longer exists in apache-airflow-providers-apache-druid 4.6.1. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-apache-druid",
+  "version": "4.6.1"
+ },
+ "airflow.operators.dummy.DummyOperator": {
+  "af2_target": "airflow.operators.empty.EmptyOperator",
+  "kind": "core"
+ },
+ "airflow.operators.dummy.EmptyOperator": {
+  "af2_target": "airflow.operators.empty.EmptyOperator",
+  "kind": "core"
+ },
+ "airflow.operators.dummy_operator.DummyOperator": {
+  "af2_target": "airflow.operators.empty.EmptyOperator",
+  "kind": "core"
+ },
+ "airflow.operators.dummy_operator.EmptyOperator": {
+  "af2_target": "airflow.operators.empty.EmptyOperator",
+  "kind": "core"
+ },
+ "airflow.operators.email_operator.EmailOperator": {
+  "af2_target": "airflow.operators.email.EmailOperator",
+  "kind": "core"
+ },
+ "airflow.operators.gcs_to_s3.GCSToS3Operator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.gcs_to_s3.GCSToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.operators.google_api_to_s3_transfer.GoogleApiToS3Operator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.google_api_to_s3.GoogleApiToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.operators.google_api_to_s3_transfer.GoogleApiToS3Transfer": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.google_api_to_s3.GoogleApiToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.operators.hive_operator.HiveOperator": {
+  "af2_target": "airflow.providers.apache.hive.operators.hive.HiveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.hive_stats_operator.HiveStatsCollectionOperator": {
+  "af2_target": "airflow.providers.apache.hive.operators.hive_stats.HiveStatsCollectionOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.hive_to_druid.HiveToDruidOperator": {
+  "af2_target": "airflow.providers.apache.druid.transfers.hive_to_druid.HiveToDruidOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-druid",
+  "version": "4.6.1"
+ },
+ "airflow.operators.hive_to_druid.HiveToDruidTransfer": {
+  "af2_target": "airflow.providers.apache.druid.transfers.hive_to_druid.HiveToDruidOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-druid",
+  "version": "4.6.1"
+ },
+ "airflow.operators.hive_to_mysql.HiveToMySqlOperator": {
+  "af2_target": "airflow.providers.apache.hive.transfers.hive_to_mysql.HiveToMySqlOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.hive_to_mysql.HiveToMySqlTransfer": {
+  "af2_target": "airflow.providers.apache.hive.transfers.hive_to_mysql.HiveToMySqlOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.hive_to_samba_operator.HiveToSambaOperator": {
+  "af2_target": "airflow.providers.apache.hive.transfers.hive_to_samba.HiveToSambaOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.http_operator.SimpleHttpOperator": {
+  "af2_target": "airflow.providers.http.operators.http.SimpleHttpOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.http.operators.http.SimpleHttpOperator, which no longer exists in apache-airflow-providers-http 6.3.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-http",
+  "version": "6.3.0"
+ },
+ "airflow.operators.jdbc_operator.JdbcOperator": {
+  "af2_target": "airflow.providers.jdbc.operators.jdbc.JdbcOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.jdbc.operators.jdbc.JdbcOperator, which no longer exists in apache-airflow-providers-jdbc 5.6.1. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-jdbc",
+  "version": "5.6.1"
+ },
+ "airflow.operators.latest_only_operator.LatestOnlyOperator": {
+  "af2_target": "airflow.operators.latest_only.LatestOnlyOperator",
+  "kind": "core"
+ },
+ "airflow.operators.mssql_operator.MsSqlOperator": {
+  "af2_target": "airflow.providers.microsoft.mssql.operators.mssql.MsSqlOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.microsoft.mssql.operators.mssql.MsSqlOperator, which no longer exists in apache-airflow-providers-microsoft-mssql 4.7.2. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-microsoft-mssql",
+  "version": "4.7.2"
+ },
+ "airflow.operators.mssql_to_hive.MsSqlToHiveOperator": {
+  "af2_target": "airflow.providers.apache.hive.transfers.mssql_to_hive.MsSqlToHiveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.mssql_to_hive.MsSqlToHiveTransfer": {
+  "af2_target": "airflow.providers.apache.hive.transfers.mssql_to_hive.MsSqlToHiveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.mysql_operator.MySqlOperator": {
+  "af2_target": "airflow.providers.mysql.operators.mysql.MySqlOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.mysql.operators.mysql.MySqlOperator, which no longer exists in apache-airflow-providers-mysql 6.7.1. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-mysql",
+  "version": "6.7.1"
+ },
+ "airflow.operators.mysql_to_hive.MySqlToHiveOperator": {
+  "af2_target": "airflow.providers.apache.hive.transfers.mysql_to_hive.MySqlToHiveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.mysql_to_hive.MySqlToHiveTransfer": {
+  "af2_target": "airflow.providers.apache.hive.transfers.mysql_to_hive.MySqlToHiveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.oracle_operator.OracleOperator": {
+  "af2_target": "airflow.providers.oracle.operators.oracle.OracleOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.oracle.operators.oracle.OracleOperator, which no longer exists in apache-airflow-providers-oracle 4.7.1. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-oracle",
+  "version": "4.7.1"
+ },
+ "airflow.operators.papermill_operator.PapermillOperator": {
+  "af2_target": "airflow.providers.papermill.operators.papermill.PapermillOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-papermill",
+  "version": "3.13.3"
+ },
+ "airflow.operators.pig_operator.PigOperator": {
+  "af2_target": "airflow.providers.apache.pig.operators.pig.PigOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-pig",
+  "version": "4.9.1"
+ },
+ "airflow.operators.postgres_operator.Mapping": {
+  "af2_target": "airflow.providers.postgres.operators.postgres.Mapping",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.postgres.operators.postgres.Mapping, which no longer exists in apache-airflow-providers-postgres 7.1.1. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-postgres",
+  "version": "7.1.1"
+ },
+ "airflow.operators.postgres_operator.PostgresOperator": {
+  "af2_target": "airflow.providers.postgres.operators.postgres.PostgresOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.postgres.operators.postgres.PostgresOperator, which no longer exists in apache-airflow-providers-postgres 7.1.1. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-postgres",
+  "version": "7.1.1"
+ },
+ "airflow.operators.presto_check_operator.PrestoCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.presto_check_operator.PrestoIntervalCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLIntervalCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.presto_check_operator.PrestoValueCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLValueCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.presto_check_operator.SQLCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.presto_check_operator.SQLIntervalCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLIntervalCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.presto_check_operator.SQLValueCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLValueCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.presto_to_mysql.PrestoToMySqlOperator": {
+  "af2_target": "airflow.providers.mysql.transfers.presto_to_mysql.PrestoToMySqlOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-mysql",
+  "version": "6.7.1"
+ },
+ "airflow.operators.presto_to_mysql.PrestoToMySqlTransfer": {
+  "af2_target": "airflow.providers.mysql.transfers.presto_to_mysql.PrestoToMySqlOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-mysql",
+  "version": "6.7.1"
+ },
+ "airflow.operators.python_operator.BranchPythonOperator": {
+  "af2_target": "airflow.operators.python.BranchPythonOperator",
+  "kind": "core"
+ },
+ "airflow.operators.python_operator.PythonOperator": {
+  "af2_target": "airflow.operators.python.PythonOperator",
+  "kind": "core"
+ },
+ "airflow.operators.python_operator.PythonVirtualenvOperator": {
+  "af2_target": "airflow.operators.python.PythonVirtualenvOperator",
+  "kind": "core"
+ },
+ "airflow.operators.python_operator.ShortCircuitOperator": {
+  "af2_target": "airflow.operators.python.ShortCircuitOperator",
+  "kind": "core"
+ },
+ "airflow.operators.redshift_to_s3_operator.RedshiftToS3Operator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.redshift_to_s3.RedshiftToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.operators.redshift_to_s3_operator.RedshiftToS3Transfer": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.redshift_to_s3.RedshiftToS3Operator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.operators.s3_file_transform_operator.S3FileTransformOperator": {
+  "af2_target": "airflow.providers.amazon.aws.operators.s3_file_transform.S3FileTransformOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.amazon.aws.operators.s3_file_transform.S3FileTransformOperator, which no longer exists in apache-airflow-providers-amazon 9.39.0. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.operators.s3_to_hive_operator.S3ToHiveOperator": {
+  "af2_target": "airflow.providers.apache.hive.transfers.s3_to_hive.S3ToHiveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.s3_to_hive_operator.S3ToHiveTransfer": {
+  "af2_target": "airflow.providers.apache.hive.transfers.s3_to_hive.S3ToHiveOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.operators.s3_to_redshift_operator.S3ToRedshiftOperator": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.s3_to_redshift.S3ToRedshiftOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.operators.s3_to_redshift_operator.S3ToRedshiftTransfer": {
+  "af2_target": "airflow.providers.amazon.aws.transfers.s3_to_redshift.S3ToRedshiftOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.operators.slack_operator.SlackAPIOperator": {
+  "af2_target": "airflow.providers.slack.operators.slack.SlackAPIOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-slack",
+  "version": "9.11.1"
+ },
+ "airflow.operators.slack_operator.SlackAPIPostOperator": {
+  "af2_target": "airflow.providers.slack.operators.slack.SlackAPIPostOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-slack",
+  "version": "9.11.1"
+ },
+ "airflow.operators.sql.BaseSQLOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.BaseSQLOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql.BranchSQLOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.BranchSQLOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql.SQLCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql.SQLColumnCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLColumnCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql.SQLIntervalCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLIntervalCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql.SQLTableCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLTableCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql.SQLThresholdCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLThresholdCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql.SQLValueCheckOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.SQLValueCheckOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql._convert_to_float_if_possible": {
+  "af2_target": "airflow.providers.common.sql.operators.sql._convert_to_float_if_possible",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql.parse_boolean": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.parse_boolean",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql_branch_operator.BranchSQLOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.BranchSQLOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sql_branch_operator.BranchSqlOperator": {
+  "af2_target": "airflow.providers.common.sql.operators.sql.BranchSQLOperator",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.operators.sqlite_operator.SqliteOperator": {
+  "af2_target": "airflow.providers.sqlite.operators.sqlite.SqliteOperator",
+  "exists": false,
+  "kind": "provider",
+  "note": "Airflow 2 pointed this at airflow.providers.sqlite.operators.sqlite.SqliteOperator, which no longer exists in apache-airflow-providers-sqlite 4.3.4. Check the provider changelog for its replacement.",
+  "package": "apache-airflow-providers-sqlite",
+  "version": "4.3.4"
+ },
+ "airflow.operators.subdag_operator.SkippedStatePropagationOptions": {
+  "af2_target": "airflow.operators.subdag.SkippedStatePropagationOptions",
+  "kind": "core"
+ },
+ "airflow.operators.subdag_operator.SubDagOperator": {
+  "af2_target": "airflow.operators.subdag.SubDagOperator",
+  "kind": "core"
+ },
+ "airflow.sensors.base_sensor_operator.BaseSensorOperator": {
+  "af2_target": "airflow.sensors.base.BaseSensorOperator",
+  "kind": "core"
+ },
+ "airflow.sensors.date_time_sensor.DateTimeSensor": {
+  "af2_target": "airflow.sensors.date_time.DateTimeSensor",
+  "kind": "core"
+ },
+ "airflow.sensors.external_task_sensor.ExternalTaskMarker": {
+  "af2_target": "airflow.sensors.external_task.ExternalTaskMarker",
+  "kind": "core"
+ },
+ "airflow.sensors.external_task_sensor.ExternalTaskSensor": {
+  "af2_target": "airflow.sensors.external_task.ExternalTaskSensor",
+  "kind": "core"
+ },
+ "airflow.sensors.external_task_sensor.ExternalTaskSensorLink": {
+  "af2_target": "airflow.sensors.external_task.ExternalTaskSensorLink",
+  "kind": "core"
+ },
+ "airflow.sensors.hive_partition_sensor.HivePartitionSensor": {
+  "af2_target": "airflow.providers.apache.hive.sensors.hive_partition.HivePartitionSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.sensors.http_sensor.HttpSensor": {
+  "af2_target": "airflow.providers.http.sensors.http.HttpSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-http",
+  "version": "6.3.0"
+ },
+ "airflow.sensors.metastore_partition_sensor.MetastorePartitionSensor": {
+  "af2_target": "airflow.providers.apache.hive.sensors.metastore_partition.MetastorePartitionSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.sensors.named_hive_partition_sensor.NamedHivePartitionSensor": {
+  "af2_target": "airflow.providers.apache.hive.sensors.named_hive_partition.NamedHivePartitionSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hive",
+  "version": "9.7.1"
+ },
+ "airflow.sensors.s3_key_sensor.S3KeySensor": {
+  "af2_target": "airflow.providers.amazon.aws.sensors.s3.S3KeySensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.sensors.sql.SqlSensor": {
+  "af2_target": "airflow.providers.common.sql.sensors.sql.SqlSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.sensors.sql_sensor.SqlSensor": {
+  "af2_target": "airflow.providers.common.sql.sensors.sql.SqlSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-common-sql",
+  "version": "2.4.0"
+ },
+ "airflow.sensors.time_delta_sensor.TimeDeltaSensor": {
+  "af2_target": "airflow.sensors.time_delta.TimeDeltaSensor",
+  "kind": "core"
+ },
+ "airflow.sensors.web_hdfs_sensor.WebHdfsSensor": {
+  "af2_target": "airflow.providers.apache.hdfs.sensors.web_hdfs.WebHdfsSensor",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-apache-hdfs",
+  "version": "4.14.2"
+ },
+ "airflow.utils.log.cloudwatch_task_handler.CloudwatchTaskHandler": {
+  "af2_target": "airflow.providers.amazon.aws.log.cloudwatch_task_handler.CloudwatchTaskHandler",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.utils.log.es_task_handler.ElasticsearchTaskHandler": {
+  "af2_target": "airflow.providers.elasticsearch.log.es_task_handler.ElasticsearchTaskHandler",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-elasticsearch",
+  "version": "6.10.0"
+ },
+ "airflow.utils.log.gcs_task_handler.GCSTaskHandler": {
+  "af2_target": "airflow.providers.google.cloud.log.gcs_task_handler.GCSTaskHandler",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.utils.log.s3_task_handler.S3TaskHandler": {
+  "af2_target": "airflow.providers.amazon.aws.log.s3_task_handler.S3TaskHandler",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-amazon",
+  "version": "9.39.0"
+ },
+ "airflow.utils.log.stackdriver_task_handler.StackdriverTaskHandler": {
+  "af2_target": "airflow.providers.google.cloud.log.stackdriver_task_handler.StackdriverTaskHandler",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-google",
+  "version": "22.8.0"
+ },
+ "airflow.utils.log.wasb_task_handler.WasbTaskHandler": {
+  "af2_target": "airflow.providers.microsoft.azure.log.wasb_task_handler.WasbTaskHandler",
+  "exists": true,
+  "kind": "provider",
+  "package": "apache-airflow-providers-microsoft-azure",
+  "version": "15.2.1"
+ }
+}

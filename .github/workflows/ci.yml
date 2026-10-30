@@ -1,0 +1,87 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  engine:
+    name: engine (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - name: docs/rules.md is up to date
+        run: python tools/gen_rules_doc.py --check
+
+  extension:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: editors/vscode
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: pip install build -e ../..
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: editors/vscode/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - name: test against a real dagshift serve
+        run: DAGSHIFT_PYTHON="$(which python)" npm test
+      - name: package (engine wheel bundled)
+        run: PYTHON="$(which python)" npm run package
+      - uses: actions/upload-artifact@v7
+        with:
+          name: vsix-preview
+          path: editors/vscode/*.vsix
+          retention-days: 14
+
+  real-airflow:
+    # Proves the rules on real installs: one Airflow 2 and one Airflow 3 target.
+    if: github.event_name == 'push'
+    name: real Airflow ${{ matrix.airflow }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - airflow: "2.10.5"
+            minor: "2.10"
+            packages: apache-airflow==2.10.5
+          - airflow: "3.3.1"
+            minor: "3.3"
+            packages: >-
+              apache-airflow-core==3.3.1 apache-airflow-task-sdk apache-airflow-providers-standard
+              apache-airflow-providers-common-sql apache-airflow-providers-smtp
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - name: install Airflow ${{ matrix.airflow }} in its own venv
+        run: |
+          python -m venv /tmp/af
+          /tmp/af/bin/pip install ${{ matrix.packages }} \
+            -c https://raw.githubusercontent.com/apache/airflow/constraints-${{ matrix.airflow }}/constraints-3.12.txt
+      - run: pytest -q tests/test_real_airflow.py
+        env:
+          DAGSHIFT_AIRFLOW_PYTHONS: ${{ matrix.minor }}=/tmp/af/bin/python
